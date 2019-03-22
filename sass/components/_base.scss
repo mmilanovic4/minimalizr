@@ -1,0 +1,103 @@
+h1, h2, h3, h4, h5, h6 {
+	padding: $spacing 0;
+}
+
+p {
+	padding: $spacing 0;
+}
+
+a {
+	color: map-get($colors, 'blue');
+	text-decoration: underline;
+
+	&:active, &:visited {
+		color: map-get($colors, 'magenta');
+	}
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+mark {
+	background-color: map-get($colors, 'yellow');
+}
+
+del {
+	text-decoration: line-through;
+}
+
+sub {
+	font-size: smaller;
+	vertical-align: sub;
+}
+
+sup {
+	font-size: smaller;
+	vertical-align: super;
+}
+
+q {
+	&::before {
+		content: '"';
+	}
+	&::after {
+		content: '"';
+	}
+}
+
+blockquote {
+	padding: $spacing 0;
+
+	footer {
+		text-align: right;
+	}
+}
+
+cite {
+	font-style: italic;
+}
+
+abbr[title] {
+	text-decoration: underline dotted;
+}
+
+%style-kbd-code {
+	padding: 2px 4px;
+	border-radius: 4px;
+	font-family: monospace;
+}
+
+kbd {
+	background-color: map-get($colors, 'black');
+	color: map-get($colors, 'white');
+	@extend %style-kbd-code;
+}
+
+code {
+	background-color: map-get($colors, 'light-gray');
+	@extend %style-kbd-code;
+}
+
+pre.code {
+	background-color: map-get($colors, 'light-gray');
+	@extend %style-kbd-code;
+	padding: $spacing;
+}
+
+ul, ol {
+	list-style-position: inside;
+}
+
+img {
+	max-width: 100%;
+}
+
+figure figcaption,
+footer {
+	font-size: smaller;
+}

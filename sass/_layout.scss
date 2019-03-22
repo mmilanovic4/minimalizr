@@ -1,0 +1,30 @@
+$columns: 12;
+
+.container {
+	width: 1200px;
+	max-width: 100%;
+	margin: 0 auto;
+
+	&-fluid {
+		width: 100%;
+	}
+}
+
+.row {
+	display: grid;
+	grid-template-columns: repeat($columns, 1fr);
+}
+
+@mixin columns-generator($columns, $size: 'md') {
+	@for $i from 1 through $columns {
+		.col-#{$size}-#{$i} {
+			grid-column: span $i;
+		}
+	}
+}
+
+@include columns-generator($columns);
+
+@media screen and (max-width: $breakpoint-sm) {
+	@include columns-generator($columns, 'sm');
+}

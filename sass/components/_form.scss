@@ -1,0 +1,41 @@
+form {
+	margin: $spacing 0;
+
+	label {
+		display: flex;
+		align-items: flex-start;
+		margin-bottom: $spacing;
+
+		span {
+			user-select: none;
+			margin-right: 5px;
+		}
+
+		input, textarea, select {
+			background-color: map-get($colors, 'white');
+			border: 1px solid map-get($colors, 'gray');
+			font-family: sans-serif;
+			outline: none;
+			padding: 5px;
+			flex: 1;
+
+			&:focus {
+				border-color: map-get($colors, 'blue');
+
+				&:invalid {
+					border-color: map-get($colors, 'red');
+				}
+			}
+		}
+
+		textarea {
+			max-height: 200px;
+			resize: vertical;
+		}
+
+		input[type="checkbox"] {
+			cursor: pointer;
+			flex: 0;
+		}
+	}
+}
