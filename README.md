@@ -21,6 +21,8 @@ Basic functionalities:
 
 - Responsive grid system
 - Color theme
+- Responsive tables
+- Basic styling for forms and buttons
 
 ### Grid system
 

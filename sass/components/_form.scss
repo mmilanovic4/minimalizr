@@ -1,14 +1,19 @@
+$form-padding: 5px;
+
 form {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: $spacing;
 	margin: $spacing 0;
 
 	label {
 		display: flex;
 		align-items: flex-start;
-		margin-bottom: $spacing;
 
 		span {
 			user-select: none;
 			margin-right: 5px;
+			padding: $form-padding;
 		}
 
 		input, textarea, select {
@@ -16,7 +21,7 @@ form {
 			border: 1px solid map-get($colors, 'gray');
 			font-family: sans-serif;
 			outline: none;
-			padding: 5px;
+			padding: $form-padding;
 			flex: 1;
 
 			&:focus {
@@ -37,5 +42,9 @@ form {
 			cursor: pointer;
 			flex: 0;
 		}
+	}
+
+	button {
+		width: fit-content;
 	}
 }

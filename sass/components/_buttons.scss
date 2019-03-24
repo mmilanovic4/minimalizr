@@ -1,13 +1,13 @@
 button {
-	border: 1px solid map-get($colors, 'gray');
 	background-color: map-get($colors, 'gray');
+	border: 1px solid map-get($colors, 'gray');
 	color: map-get($colors, 'white');
 	cursor: pointer;
 	outline: none;
-	padding: $spacing;
+	padding: $form-padding;
 
 	&:enabled:hover {
-		opacity: .9;
+		opacity: .8;
 	}
 
 	&[type="submit"] {
