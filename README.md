@@ -50,3 +50,15 @@ Usage example:
 ```
 <p class="bg-blue text-white padded">Hello, my name is John Doe.</p>
 ```
+
+### Responsive tables
+
+Usage example:
+
+```
+<div class="table-responsive">
+	<table>
+	...
+	</table>
+</div>
+```
