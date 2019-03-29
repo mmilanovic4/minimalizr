@@ -5,3 +5,20 @@
 .underline {
 	text-decoration: underline;
 }
+
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+.truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+	.hide-on-sm {
+		display: none;
+	}
+}
