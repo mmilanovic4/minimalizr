@@ -23,6 +23,7 @@ Basic functionalities:
 - Color theme
 - Responsive tables
 - Basic styling for forms and buttons
+- Other basic components like loaders etc.
 
 ### Grid system
 
@@ -63,4 +64,14 @@ Usage example:
 	...
 	</table>
 </div>
+```
+
+### Loader
+
+![CSS loader](assets/loader.png)
+
+You can customize loader properties inside [_loader.scss](sass/components/_loader.scss). Usage example:
+
+```
+<div class="loader"></div>
 ```

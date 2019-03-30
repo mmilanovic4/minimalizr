@@ -1,0 +1,19 @@
+$loader-thickness: 5px;
+$loader-size: 60px;
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+
+.loader {
+	border: $loader-thickness solid map-get($colors, 'light-gray');
+	border-top: $loader-thickness solid map-get($colors, 'blue');
+	border-radius: 50%;
+	height: $loader-size;
+	width: $loader-size;
+	animation-name: spin;
+	animation-duration: 1s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+}
