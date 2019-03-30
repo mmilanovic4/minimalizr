@@ -1,3 +1,7 @@
+.bordered {
+	border: 1px solid map-get($colors, 'dark-gray');
+}
+
 .padded {
 	padding: $spacing;
 }
@@ -15,6 +19,12 @@
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+.drop-cap {
+	&::first-letter {
+		font-size: xx-large;
+	}
 }
 
 @media screen and (max-width: $breakpoint-sm) {
