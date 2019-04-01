@@ -12,11 +12,11 @@ Lightweight CSS boilerplate built with Sass for easier configuration of grid, co
 
 ## Usage
 
-Just download [minimalist.css](css/minimalist.css) and include it in your HTML file:
+Just download [minimalizr.css](css/minimalizr.css) and include it in your HTML file:
 
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="minimalist.css">
+<link rel="stylesheet" href="css/minimalizr.css">
 ```
 
 ## Documentation
