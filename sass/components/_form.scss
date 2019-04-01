@@ -12,8 +12,17 @@ form {
 
 		span {
 			user-select: none;
-			margin-right: 5px;
 			padding: $form-padding;
+			width: 150px;
+		}
+
+		&.form-checkbox span {
+			cursor: pointer;
+			width: auto;
+		}
+
+		input, textarea, select, button {
+			font-size: .9rem;
 		}
 
 		input, textarea, select {
@@ -34,6 +43,7 @@ form {
 		}
 
 		textarea {
+			min-height: 50px;
 			max-height: 200px;
 			resize: vertical;
 		}

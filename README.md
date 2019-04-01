@@ -6,6 +6,10 @@
 
 Lightweight CSS boilerplate built with Sass for easier configuration of grid, colors and media queries.
 
+## Requirements
+
+- [Sass](https://sass-lang.com/) - for development
+
 ## Usage
 
 Just download [minimalist.css](css/minimalist.css) and include it in your HTML file:
@@ -64,6 +68,37 @@ Usage example:
 	...
 	</table>
 </div>
+```
+
+### Form
+
+Usage example:
+
+```
+<form>
+	<label>
+		<span>Name</span>
+		<input type="text" required>
+	</label>
+	<label>
+		<span>Country</span>
+		<select>
+			<option value="rs" checked>Serbia</option>
+			<option value="mn">Montenegro</option>
+			<option value="ba">Bosnia and Herzegovina</option>
+		</select>
+	</label>
+	<label>
+		<span>Comment</span>
+		<textarea></textarea>
+	</label>
+	<label class="form-checkbox">
+		<span>I agree to the privacy policy</span>
+		<input type="checkbox">
+	</label>
+	<hr>
+	<button type="submit">Submit</button>
+</form>
 ```
 
 ### Spinners
