@@ -27,7 +27,7 @@ Basic functionalities:
 - Color theme
 - Responsive tables
 - Basic styling for forms and buttons
-- Other basic components like spinners etc.
+- Other basic components like spinners, breadcrumbs etc.
 
 ### Grid system
 
@@ -105,8 +105,26 @@ Usage example:
 
 ![CSS spinner](assets/spinner.png)
 
-You can customize spinner properties inside [_spinner.scss](sass/components/_spinner.scss). Usage example:
+You can customize spinner properties inside [_spinner.scss](sass/components/_spinner.scss).
+
+Usage example:
 
 ```
 <div class="spinner"></div>
+```
+
+### Breadcrumbs
+
+![CSS breadcrumbs](assets/breadcrumbs.png)
+
+You can customize breadcrumbs properties inside [_breadcrumbs.scss](sass/components/_breadcrumbs.scss).
+
+Usage example (note that the last `a` element is missing `href` attribute - don't worry, this markup will still comply [W3 specification](https://www.w3.org/TR/2011/WD-html5-20110525/links.html#attr-hyperlink-href)):
+
+```
+<div class="breadcrumbs">
+	<a href="#">Home</a>
+	<a href="#">Music</a>
+	<a>Vangelis</a>
+</div>
 ```
