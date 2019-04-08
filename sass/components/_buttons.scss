@@ -1,24 +1,18 @@
 button {
 	background-color: map-get($colors, 'gray');
-	border: 1px solid map-get($colors, 'gray');
+	border: 0;
 	color: map-get($colors, 'white');
 	cursor: pointer;
-	outline: none;
 	padding: $form-padding;
-
-	&:enabled:hover {
-		opacity: .8;
-	}
+	user-select: none;
 
 	&[type="submit"] {
 		background-color: map-get($colors, 'blue');
-		border-color: map-get($colors, 'blue');
 		color: map-get($colors, 'white');
 	}
 
 	&[disabled] {
 		background-color: map-get($colors, 'light-gray');
-		border-color: map-get($colors, 'light-gray');
 		color: map-get($colors, 'white');
 		cursor: not-allowed;
 	}

@@ -1,10 +1,10 @@
 <p align="center">
-	<img src="assets/logo.png" alt="PHP MVC Boilerplate">
+	<img src="assets/logo.png" alt="minimalizr.css">
 </p>
 
 # Overview
 
-Lightweight CSS boilerplate built with Sass for easier configuration of grid, colors and media queries.
+Lightweight CSS framework built with Sass for easier configuration of grid, colors and media queries. It's purely CSS, no JavaScript - you just need to include one .css file in your project to use it.
 
 ## Requirements
 
@@ -33,7 +33,7 @@ Basic functionalities:
 
 ![Grid system](assets/grid.png)
 
-This boilerplate provides basic responsive grid system similiar to the one in [Bootstrap 3](https://getbootstrap.com/). Default number of columns is 12, but that can be changed inside [_layout.scss](sass/_layout.scss) by editing `$columns` variable.
+This framework provides basic responsive grid system similiar to the one in [Bootstrap 3](https://getbootstrap.com/). Default number of columns is 12, but that can be changed inside [_layout.scss](sass/_layout.scss) by editing `$columns` variable.
 
 Usage example:
 
@@ -72,34 +72,40 @@ Usage example:
 
 ### Form
 
+![Form](assets/form.png)
+
 Usage example:
 
 ```
 <form>
 	<label>
-		<span>Name</span>
+		<span>Book title</span>
 		<input type="text" required>
 	</label>
 	<label>
-		<span>Country</span>
+		<span>Book author</span>
 		<select>
-			<option value="rs" checked>Serbia</option>
-			<option value="mn">Montenegro</option>
-			<option value="ba">Bosnia and Herzegovina</option>
+			<option value="isaac_asimov">Isaac Asimov</option>
+			<option value="philip-k-dick">Philip K. Dick</option>
+			<option value="borislav-pekic" checked>Borislav Pekić</option>
 		</select>
 	</label>
 	<label>
-		<span>Comment</span>
+		<span>Book description</span>
 		<textarea></textarea>
 	</label>
 	<label class="form-checkbox">
-		<span>I agree to the privacy policy</span>
+		<span>Hardcover</span>
 		<input type="checkbox">
 	</label>
 	<hr>
-	<button type="submit">Submit</button>
+	<button type="submit">Add book</button>
 </form>
 ```
+
+When it comes to buttons, three different styles are provided: normal button, disabled button and submit button. You can use `bg-*` and `text-*` classes for custom background/foreground color.
+
+![Buttons](assets/buttons.png)
 
 ### Spinners
 

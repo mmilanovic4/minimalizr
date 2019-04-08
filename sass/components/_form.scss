@@ -1,4 +1,4 @@
-$form-padding: 5px;
+$form-padding: 10px;
 
 form {
 	display: grid;
@@ -8,17 +8,12 @@ form {
 
 	label {
 		display: flex;
+		flex-direction: column;
 		align-items: flex-start;
 
 		span {
 			user-select: none;
-			padding: $form-padding;
-			width: 150px;
-		}
-
-		&.form-checkbox span {
-			cursor: pointer;
-			width: auto;
+			padding: $spacing / 2 0;
 		}
 
 		input, textarea, select, button {
@@ -27,19 +22,10 @@ form {
 
 		input, textarea, select {
 			background-color: map-get($colors, 'white');
-			border: 1px solid map-get($colors, 'gray');
+			border: 1px solid map-get($colors, 'light-gray');
 			font-family: sans-serif;
-			outline: none;
 			padding: $form-padding;
-			flex: 1;
-
-			&:focus {
-				border-color: map-get($colors, 'blue');
-
-				&:invalid {
-					border-color: map-get($colors, 'red');
-				}
-			}
+			width: 100%;
 		}
 
 		textarea {
@@ -48,10 +34,19 @@ form {
 			resize: vertical;
 		}
 
-		input[type="checkbox"] {
-			cursor: pointer;
-			flex: 0;
-			align-self: center;
+		&.form-checkbox {
+			flex-direction: row;
+	
+			span {
+				cursor: pointer;
+			}
+	
+			input[type="checkbox"] {
+				cursor: pointer;
+				align-self: center;
+				width: auto;
+				margin-left: $form-padding;
+			}
 		}
 	}
 
