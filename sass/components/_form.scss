@@ -13,7 +13,7 @@ form {
 
 		span {
 			user-select: none;
-			padding: $spacing / 2 0;
+			margin-bottom: $spacing / 2;
 		}
 
 		input, textarea, select, button {
@@ -39,6 +39,7 @@ form {
 	
 			span {
 				cursor: pointer;
+				margin-bottom: 0;
 			}
 	
 			input[type="checkbox"] {

@@ -101,3 +101,10 @@ figure figcaption,
 footer {
 	font-size: smaller;
 }
+
+details {
+	summary {
+		cursor: pointer;
+		user-select: none;
+	}
+}

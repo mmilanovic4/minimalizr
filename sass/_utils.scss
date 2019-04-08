@@ -1,5 +1,9 @@
+.hide {
+	display: none;
+}
+
 .bordered {
-	border: 1px solid map-get($colors, 'dark-gray');
+	border: 1px solid map-get($colors, 'gray');
 }
 
 .padded {
