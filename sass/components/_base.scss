@@ -13,6 +13,11 @@ a {
 	&:active, &:visited {
 		color: map-get($colors, 'magenta');
 	}
+
+	&:not([href]) {
+		color: map-get($colors, 'black');
+		text-decoration: none;
+	}
 }
 
 strong {

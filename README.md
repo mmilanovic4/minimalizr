@@ -128,9 +128,15 @@ You can customize breadcrumbs properties inside [_breadcrumbs.scss](sass/compone
 Usage example (note that the last `a` element is missing `href` attribute - don't worry, this markup will still comply [W3 specification](https://www.w3.org/TR/2011/WD-html5-20110525/links.html#attr-hyperlink-href)):
 
 ```
-<div class="breadcrumbs">
-	<a href="#">Home</a>
-	<a href="#">Music</a>
-	<a>Vangelis</a>
-</div>
+<ul class="breadcrumbs">
+	<li>
+		<a href="#">Home</a>
+	</li>
+	<li>
+		<a href="#">Music</a>
+	</li>
+	<li>
+		<a>Vangelis</a>
+	</li>
+</ul>
 ```

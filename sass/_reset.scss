@@ -4,6 +4,11 @@
 	padding: 0;
 }
 
+*:focus {
+	outline: 1px solid map-get($colors, 'blue');
+	outline-offset: 1px;
+}
+
 html {
 	scroll-behavior: smooth;
 }

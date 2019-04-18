@@ -1,14 +1,16 @@
 $breadcrumb-separator: '/';
 
-.breadcrumbs {
+ul.breadcrumbs {
 	display: flex;
+	list-style-type: none;
 	user-select: none;
 
-	a {
+	li {
 		padding: $spacing 0;
 
 		&:not(:last-child)::after {
 			content: ' ' + $breadcrumb-separator + ' ';
+			color: map-get($colors, 'blue');
 			display: inline-block;
 			margin: 0 $spacing;
 		}
