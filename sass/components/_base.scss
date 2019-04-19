@@ -91,6 +91,8 @@ code {
 pre.code {
 	background-color: map-get($colors, 'light-gray');
 	@extend %style-kbd-code;
+	margin: $spacing 0;
+	overflow-x: auto;
 	padding: $spacing;
 }
 
