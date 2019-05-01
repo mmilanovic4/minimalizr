@@ -94,10 +94,12 @@ Usage example:
 		<span>Book description</span>
 		<textarea></textarea>
 	</label>
-	<label class="form-checkbox">
-		<span>Hardcover</span>
-		<input type="checkbox">
-	</label>
+	<div class="form-checkbox">
+		<label>
+			Hardcover
+			<input type="checkbox">
+		</label>
+	</div>
 	<hr>
 	<button type="submit">Add book</button>
 </form>

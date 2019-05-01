@@ -6,7 +6,7 @@ form {
 	grid-gap: $spacing;
 	margin: $spacing 0;
 
-	label {
+	& > label {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -28,26 +28,40 @@ form {
 			width: 100%;
 		}
 
+		select[multiple] {
+			max-height: 200px;
+			padding: 0;
+
+			option {
+				padding: $spacing;
+			}
+		}
+
 		textarea {
 			min-height: 50px;
 			max-height: 200px;
 			resize: vertical;
 		}
+	}
 
-		&.form-checkbox {
-			flex-direction: row;
-	
-			span {
-				cursor: pointer;
-				margin-bottom: 0;
-			}
-	
-			input[type="checkbox"] {
-				cursor: pointer;
-				align-self: center;
-				width: auto;
-				margin-left: $form-padding;
-			}
+	.form-checkbox {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+
+		label {
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			user-select: none;
+		}
+
+		input[type="checkbox"] {
+			cursor: pointer;
+			align-self: center;
+			width: auto;
+			margin-left: $form-padding;
 		}
 	}
 
