@@ -1,7 +1,13 @@
 * {
 	box-sizing: border-box;
 	margin: 0;
+	outline: none;
 	padding: 0;
+}
+
+*:focus {
+	outline: 1px dotted map-get($colors, 'black');
+	outline-offset: 2px;
 }
 
 html {
