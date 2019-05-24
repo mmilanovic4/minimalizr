@@ -6,8 +6,8 @@
 }
 
 *:focus {
-	outline: 1px dotted map-get($colors, 'black');
-	outline-offset: 2px;
+	outline: 1px dotted map-get($colors, 'gray');
+	outline-offset: 3px;
 }
 
 html {

@@ -11,6 +11,11 @@ button {
 		color: map-get($colors, 'white');
 	}
 
+	&[type="reset"] {
+		background-color: map-get($colors, 'red');
+		color: map-get($colors, 'white');
+	}
+
 	&[disabled] {
 		background-color: map-get($colors, 'light-gray');
 		color: map-get($colors, 'white');

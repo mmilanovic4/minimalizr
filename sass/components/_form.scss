@@ -26,6 +26,11 @@ form {
 			font-family: sans-serif;
 			padding: $form-padding;
 			width: 100%;
+
+			&:focus {
+				border-color: map-get($colors, 'blue');
+				outline: none;
+			}
 		}
 
 		select[multiple] {

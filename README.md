@@ -107,7 +107,12 @@ Usage example:
 
 When it comes to buttons, three different styles are provided: normal button, disabled button and submit button. You can use `bg-*` and `text-*` classes for custom background/foreground color.
 
-![Buttons](assets/buttons.png)
+```
+<button type="button">Normal button</button>
+<button type="submit">Submit button</button>
+<button type="reset">Reset button</button>
+<button type="button" disabled>Disabled button</button>
+```
 
 ### Spinners
 

@@ -94,6 +94,7 @@ pre.code {
 	margin: $spacing 0;
 	overflow-x: auto;
 	padding: $spacing;
+	user-select: all;
 }
 
 ul, ol {
