@@ -18,7 +18,7 @@ button {
 
 	&[disabled] {
 		background-color: map-get($colors, 'light-gray');
-		color: map-get($colors, 'white');
+		color: map-get($colors, 'dark-gray');
 		cursor: not-allowed;
 	}
 }

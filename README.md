@@ -38,9 +38,11 @@ This framework provides basic responsive grid system similiar to the one in [Boo
 Usage example:
 
 ```
-<div class="row">
-	<section class="col-md-8 col-sm-12">Section</section>
-	<aside class="col-md-4 col-sm-12">Aside</aside>
+<div class="container">
+	<div class="row">
+		<section class="col-md-8 col-sm-12">Section</section>
+		<aside class="col-md-4 col-sm-12">Aside</aside>
+	</div>
 </div>
 ```
 

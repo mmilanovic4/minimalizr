@@ -28,7 +28,7 @@ form {
 			width: 100%;
 
 			&:focus {
-				border-color: map-get($colors, 'blue');
+				border-color: map-get($colors, 'dark-gray');
 				outline: none;
 			}
 		}
