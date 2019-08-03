@@ -5,7 +5,7 @@
 
 .fade-in {
 	animation-name: fade-in;
-	animation-duration: 2s;
-	animation-timing-function: linear;
+	animation-duration: .8s;
+	animation-timing-function: ease-out;
 	animation-iteration-count: 1;
 }

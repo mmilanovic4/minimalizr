@@ -13,7 +13,7 @@ $spinner-size: 40px;
 	height: $spinner-size;
 	width: $spinner-size;
 	animation-name: spin;
-	animation-duration: 1s;
+	animation-duration: .8s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 }
