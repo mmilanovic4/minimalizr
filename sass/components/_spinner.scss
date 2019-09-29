@@ -16,8 +16,5 @@ $spinner-size: 40px;
 	animation-duration: .8s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
-}
-
-form .spinner {
-	justify-self: center;
+	margin: $spacing auto;
 }

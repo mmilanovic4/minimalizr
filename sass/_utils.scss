@@ -10,6 +10,10 @@
 	padding: $spacing;
 }
 
+.rounded {
+	border-radius: $radius;
+}
+
 .underline {
 	text-decoration: underline;
 }
