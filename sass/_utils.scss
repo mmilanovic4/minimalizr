@@ -12,6 +12,10 @@
 
 .rounded {
 	border-radius: $radius;
+
+	&-circle {
+		border-radius: 50%;
+	}
 }
 
 .underline {
