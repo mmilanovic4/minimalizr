@@ -25,3 +25,10 @@ body {
 	background-color: map-get($colors, 'blue');
 	color: map-get($colors, 'white');
 }
+
+button {
+	font-size: 1rem;
+}
+
+@media screen and (max-width: $breakpoint-sm) {
+}

@@ -1,7 +1,3 @@
-h1, h2, h3, h4, h5, h6 {
-	padding: $spacing 0;
-}
-
 h1 {
 	font-size: 3rem;
 	line-height: 5rem;
@@ -14,6 +10,7 @@ h2 {
 
 p {
 	padding: $spacing 0;
+	text-align: justify;
 }
 
 a {
@@ -109,6 +106,8 @@ pre.code {
 	overflow-x: auto;
 	padding: $spacing;
 	user-select: all;
+	tab-size: 2;
+	-moz-tab-size: 2;
 }
 
 ul, ol {
@@ -131,7 +130,7 @@ details {
 	border-radius: $radius;
 
 	summary {
-		border-bottom: 1px solid map-get($colors, 'dark-gray');
+		border-bottom: 1px dotted map-get($colors, 'dark-gray');
 		cursor: pointer;
 		font-weight: bold;
 		padding: $spacing;

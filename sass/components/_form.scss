@@ -54,6 +54,8 @@ form {
 		flex-direction: row;
 		align-items: center;
 		flex-wrap: wrap;
+		width: fit-content;
+		width: -moz-fit-content;
 
 		label {
 			cursor: pointer;
@@ -72,5 +74,6 @@ form {
 
 	button {
 		width: fit-content;
+		width: -moz-fit-content;
 	}
 }
