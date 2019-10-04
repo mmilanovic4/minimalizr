@@ -29,6 +29,12 @@ Basic functionalities:
 - Basic styling for forms and buttons
 - Other basic components like spinners, breadcrumbs etc.
 
+### Text
+
+![Text](assets/text.png)
+
+This framework use Golden Ratio between `line-height` and `font-size` CSS properties. For example, when `font-size` is set to 1rem, `line-height` will be 1.6rem.
+
 ### Grid system
 
 ![Grid system](assets/grid.png)

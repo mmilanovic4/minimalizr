@@ -31,6 +31,10 @@ form {
 				border-color: map-get($colors, 'dark-gray');
 				outline: none;
 			}
+
+			&:disabled {
+				background-color: map-get($colors, 'light-gray');
+			}
 		}
 
 		select[multiple] {
