@@ -102,9 +102,9 @@ Usage example:
 	<label>
 		<span>Book author</span>
 		<select>
-			<option value="isaac_asimov">Isaac Asimov</option>
-			<option value="philip-k-dick">Philip K. Dick</option>
-			<option value="borislav-pekic" checked>Borislav Pekić</option>
+			<option value="1">Isaac Asimov</option>
+			<option value="2">Philip K. Dick</option>
+			<option value="3" selected>Borislav Pekić</option>
 		</select>
 	</label>
 	<label>
@@ -114,7 +114,7 @@ Usage example:
 	<div class="form-checkbox">
 		<label>
 			Hardcover
-			<input type="checkbox">
+			<input type="checkbox" checked>
 		</label>
 	</div>
 	<hr>
@@ -141,6 +141,21 @@ Usage example:
 
 ```
 <div class="spinner"></div>
+```
+
+### List with colored bullets
+
+![List with colored bullets](assets/list_bulleted.png)
+
+Usage example:
+
+```
+<ul class="list-bulleted">
+	<li>C</li>
+	<li>JavaScript</li>
+	<li>PHP</li>
+	<li>Python</li>
+</ul>
 ```
 
 ### Breadcrumbs
