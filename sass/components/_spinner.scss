@@ -2,8 +2,8 @@ $spinner-thickness: 4px;
 $spinner-size: 40px;
 
 @keyframes spin {
-	0% { transform: rotate(0deg); }
-	100% { transform: rotate(360deg); }
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
 }
 
 .spinner {
@@ -13,7 +13,7 @@ $spinner-size: 40px;
 	height: $spinner-size;
 	width: $spinner-size;
 	animation-name: spin;
-	animation-duration: .8s;
+	animation-duration: 1s;
 	animation-timing-function: linear;
 	animation-iteration-count: infinite;
 	margin: $spacing auto;
