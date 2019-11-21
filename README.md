@@ -29,7 +29,7 @@ Basic functionalities:
 - Basic styling for forms and buttons
 - Other basic components like spinners, breadcrumbs etc.
 
-Full page screenshot: [**here**](assets/fullpage.png).
+Full page screenshot: [**here**](FULLPAGE.md).
 
 ### Text
 
