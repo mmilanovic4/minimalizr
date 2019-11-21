@@ -29,6 +29,8 @@ Basic functionalities:
 - Basic styling for forms and buttons
 - Other basic components like spinners, breadcrumbs etc.
 
+Full page screenshot: [**here**](assets/fullpage.png).
+
 ### Text
 
 ![Text](assets/text.png)
@@ -66,67 +68,7 @@ Usage example:
 <p class="bg-blue text-white padded">Hello, my name is John Doe.</p>
 ```
 
-### Responsive tables
-
-Usage example:
-
-```
-<div class="table-responsive">
-	<table>
-		<thead>
-			<tr>
-				<th>...</th>
-				<th>...</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>...</td>
-				<td>...</td>
-			</tr>
-			<tr>
-				<td>...</td>
-				<td>...</td>
-			</tr>
-		</tbody>
-	</table>
-</div>
-```
-
-### Form
-
-![Form](assets/form.png)
-
-Usage example:
-
-```
-<form>
-	<label>
-		<span>Book title</span>
-		<input type="text" required>
-	</label>
-	<label>
-		<span>Book author</span>
-		<select>
-			<option value="1">Isaac Asimov</option>
-			<option value="2">Philip K. Dick</option>
-			<option value="3" selected>Borislav Pekić</option>
-		</select>
-	</label>
-	<label>
-		<span>Book description</span>
-		<textarea></textarea>
-	</label>
-	<div class="form-checkbox">
-		<label>
-			Hardcover
-			<input type="checkbox" checked>
-		</label>
-	</div>
-	<hr>
-	<button type="submit">Add book</button>
-</form>
-```
+### Buttons
 
 When it comes to buttons, three different styles are provided: normal button, disabled button and submit button. You can use `bg-*` and `text-*` classes for custom background/foreground color.
 
@@ -135,33 +77,6 @@ When it comes to buttons, three different styles are provided: normal button, di
 <button type="submit">Submit button</button>
 <button type="reset">Reset button</button>
 <button type="button" disabled>Disabled button</button>
-```
-
-### Spinners
-
-![CSS spinner](assets/spinner.png)
-
-You can customize spinner properties inside [_spinner.scss](sass/components/_spinner.scss).
-
-Usage example:
-
-```
-<div class="spinner"></div>
-```
-
-### List with colored bullets
-
-![List with colored bullets](assets/list_bulleted.png)
-
-Usage example:
-
-```
-<ul class="list-bulleted">
-	<li>C</li>
-	<li>JavaScript</li>
-	<li>PHP</li>
-	<li>Python</li>
-</ul>
 ```
 
 ### Breadcrumbs

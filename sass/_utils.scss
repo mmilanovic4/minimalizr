@@ -22,7 +22,7 @@
 	text-decoration: underline;
 }
 
-.larger { font-size: 4rem; }
+.larger { font-size: larger; }
 
 .smaller { font-size: smaller; }
 
@@ -31,16 +31,16 @@
 .text-right { text-align: right; }
 .text-justify { text-align: justify; }
 
+.centered {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .truncate {
 	white-space: nowrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
-}
-
-.drop-cap {
-	&::first-letter {
-		font-size: xx-large;
-	}
 }
 
 @media screen and (max-width: $breakpoint-sm) {

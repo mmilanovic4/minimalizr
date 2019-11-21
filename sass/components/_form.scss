@@ -35,6 +35,10 @@ form {
 			&:disabled {
 				background-color: map-get($colors, 'light-gray');
 			}
+
+			&:invalid {
+				border-color: map-get($colors, 'red');
+			}
 		}
 
 		select[multiple] {

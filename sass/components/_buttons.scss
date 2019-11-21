@@ -21,4 +21,18 @@ button {
 		color: map-get($colors, 'dark-gray');
 		cursor: not-allowed;
 	}
+
+	opacity: .8;
+	transition-property: opacity;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&:active {
+		transform: translateY(1px);
+		outline: none;
+	}
 }

@@ -1,11 +1,20 @@
+h1, h2, h3 {
+	margin: $spacing 0;
+}
+
 h1 {
 	font-size: 3rem;
-	line-height: 5rem;
+	line-height: 3 * 1.6rem;
 }
 
 h2 {
 	font-size: 2rem;
-	line-height: 3rem;
+	line-height: 2 * 1.6rem;
+}
+
+h3 {
+	font-size: 1.5rem;
+	line-height: 1.5 * 1.6rem;
 }
 
 p {
@@ -74,6 +83,11 @@ blockquote {
 	}
 }
 
+hr {
+	border: 2px solid map-get($colors, 'dark-gray');
+	margin: $spacing 0;
+}
+
 cite {
 	font-style: italic;
 }
@@ -120,7 +134,15 @@ img {
 
 }
 
-figure figcaption,
+figure {
+	display: inline-block;
+}
+
+figure figcaption {
+	font-size: smaller;
+	text-align: center;
+}
+
 footer {
 	font-size: smaller;
 }
@@ -128,6 +150,7 @@ footer {
 details {
 	background-color: map-get($colors, 'light-gray');
 	border-radius: $radius;
+	margin: $spacing 0;
 
 	summary {
 		border-bottom: 1px dotted map-get($colors, 'dark-gray');
