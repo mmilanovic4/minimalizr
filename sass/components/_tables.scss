@@ -3,10 +3,12 @@
 }
 
 table {
+	font-size: smaller;
 	border-collapse: collapse;
 	margin: $spacing 0;
 	table-layout: fixed;
 	width: 100%;
+	min-width: 500px;
 
 	&, th, td {
 		border: 1px solid map-get($colors, 'black');
@@ -17,7 +19,10 @@ table {
 	}
 
 	th, td {
-		padding: $spacing;
+		padding: 5px;
 		text-align: left;
+		white-space: nowrap;
+		overflow-x: hidden;
+		text-overflow: ellipsis;
 	}
 }

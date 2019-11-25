@@ -26,6 +26,10 @@ $columns: 12;
 
 @include columns-generator($columns);
 
+.col-pull-left { grid-column-start: 1; }
+
+.col-pull-right { grid-column-end: $columns; }
+
 @media screen and (max-width: $breakpoint-sm) {
 	@include columns-generator($columns, 'sm');
 }

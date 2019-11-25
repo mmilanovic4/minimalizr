@@ -14,6 +14,7 @@ form {
 		span {
 			user-select: none;
 			margin-bottom: $spacing / 2;
+			font-size: smaller;
 		}
 
 		input, textarea, select, button {
@@ -27,17 +28,17 @@ form {
 			padding: $form-padding;
 			width: 100%;
 
-			&:focus {
-				border-color: map-get($colors, 'dark-gray');
-				outline: none;
-			}
-
 			&:disabled {
 				background-color: map-get($colors, 'light-gray');
 			}
 
 			&:invalid {
 				border-color: map-get($colors, 'red');
+			}
+
+			&:focus {
+				border-color: map-get($colors, 'dark-gray');
+				outline: none;
 			}
 		}
 
@@ -70,6 +71,7 @@ form {
 			display: flex;
 			align-items: center;
 			user-select: none;
+			font-size: smaller;
 		}
 
 		input[type="checkbox"] {
