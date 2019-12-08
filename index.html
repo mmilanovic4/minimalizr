@@ -137,19 +137,22 @@ echo "Hello.";
 
 		<div class="row">
 			<form class="col-md-4 col-sm-12">
-				<label>
-					<span>Book title</span>
-					<input type="text" required>
-				</label>
-				<label>
-					<span>Book author</span>
-					<select required>
-						<option value="" selected>Select one</option>
-						<option value="1">Isaac Asimov</option>
-						<option value="2">Philip K. Dick</option>
-						<option value="3">Borislav Pekić</option>
-					</select>
-				</label>
+				<fieldset>
+					<legend>Main details</legend>
+					<label>
+						<span>Book title</span>
+						<input type="text" required>
+					</label>
+					<label>
+						<span>Book author</span>
+						<select required>
+							<option value="" selected>Select one</option>
+							<option value="1">Isaac Asimov</option>
+							<option value="2">Philip K. Dick</option>
+							<option value="3">Borislav Pekić</option>
+						</select>
+					</label>
+				</fieldset>
 				<label>
 					<span>Book genre</span>
 					<select multiple required>
@@ -171,9 +174,20 @@ echo "Hello.";
 						<input type="checkbox" checked>
 					</label>
 				</div>
+				<label>
+					<span>PIN code</span>
+					<input type="password">
+				</label>
 				<hr>
 				<button type="submit">Add book</button>
 			</form>
+
+			<div class="col-md-4 col-sm-12 col-pull-right centered">
+				<label class="file-upload">
+					<input type="file">
+					<span>Choose a file</span>
+				</label>
+			</div>
 		</div>
 
 		<div style="margin: 10px 0;">

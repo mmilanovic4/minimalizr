@@ -6,7 +6,7 @@ form {
 	grid-gap: $spacing;
 	margin: $spacing 0;
 
-	& > label {
+	& > label, fieldset > label {
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -85,5 +85,22 @@ form {
 	button {
 		width: fit-content;
 		width: -moz-fit-content;
+	}
+
+	fieldset {
+		border: 1px solid map-get($colors, 'dark-gray');
+		padding: {
+			left: $form-padding;
+			right: $form-padding;
+			bottom: $form-padding;
+		}
+
+		legend {
+			font-size: smaller;
+			font-weight: bold;
+			padding: 0 5px;
+		}
+
+		& > label { margin-bottom: $spacing; }
 	}
 }

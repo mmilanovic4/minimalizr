@@ -1,0 +1,10 @@
+.file-upload {
+
+	background-color: map-get($colors, 'gray');
+	color: map-get($colors, 'white');
+
+	@include buttonize();
+
+	input { display: none; }
+
+}

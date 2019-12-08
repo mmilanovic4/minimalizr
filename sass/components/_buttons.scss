@@ -1,10 +1,29 @@
+@mixin buttonize {
+	cursor: pointer;
+	padding: 10px 15px;
+
+	opacity: .8;
+	transition-property: opacity;
+	transition-duration: .3s;
+	transition-timing-function: ease-in-out;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&:active {
+		transform: translateY(1px);
+		outline: none;
+	}
+}
+
 button {
 	background-color: map-get($colors, 'gray');
 	border: 0;
 	color: map-get($colors, 'white');
-	cursor: pointer;
-	padding: $form-padding;
 	user-select: none;
+
+	@include buttonize();
 
 	&[type="submit"] {
 		background-color: map-get($colors, 'blue');
@@ -20,19 +39,5 @@ button {
 		background-color: map-get($colors, 'light-gray');
 		color: map-get($colors, 'dark-gray');
 		cursor: not-allowed;
-	}
-
-	opacity: .8;
-	transition-property: opacity;
-	transition-duration: .3s;
-	transition-timing-function: ease-in-out;
-
-	&:hover {
-		opacity: 1;
-	}
-
-	&:active {
-		transform: translateY(1px);
-		outline: none;
 	}
 }
