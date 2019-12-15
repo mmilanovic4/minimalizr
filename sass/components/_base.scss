@@ -76,12 +76,8 @@ q {
 }
 
 blockquote {
-	padding: $spacing 0;
-	font-style: italic;
-
-	footer {
-		font-style: normal;
-	}
+	border-left: 5px solid map-get($colors, 'blue');
+	padding: $spacing;
 }
 
 hr {
