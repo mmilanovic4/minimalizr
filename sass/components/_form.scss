@@ -37,7 +37,7 @@ form {
 			}
 
 			&:focus {
-				border-color: map-get($colors, 'dark-gray');
+				border-color: map-get($colors, 'blue');
 				outline: none;
 			}
 		}

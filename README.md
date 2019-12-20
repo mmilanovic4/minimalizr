@@ -4,7 +4,7 @@
 
 # Overview
 
-Lightweight CSS framework built with Sass for easier configuration of grid, colors and media queries. It's purely CSS, no JavaScript - you just need to include one .css file in your project to use it.
+Lightweight CSS framework built with Sass for easier configuration of grid, colors and media queries. It's purely CSS, no JavaScript - you just need to include one CSS file in your project to use it.
 
 ## Requirements
 
