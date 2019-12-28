@@ -34,6 +34,7 @@ form {
 
 			&:invalid {
 				border-color: map-get($colors, 'red');
+				box-shadow: none;
 			}
 
 			&:focus {

@@ -2,18 +2,16 @@
 	cursor: pointer;
 	padding: 10px 15px;
 
-	opacity: .8;
 	transition-property: opacity;
 	transition-duration: .3s;
 	transition-timing-function: ease-in-out;
 
 	&:hover {
-		opacity: 1;
+		opacity: .7;
 	}
 
-	&:active {
-		transform: translateY(1px);
-		outline: none;
+	&:active:not(:disabled) {
+		transform: translateY(2px);
 	}
 }
 
