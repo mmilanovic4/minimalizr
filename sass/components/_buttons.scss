@@ -1,39 +1,56 @@
 @mixin buttonize {
+	$c: map-get($colors, 'gray');
+	background-color: $c;
+	border: 0;
+	color: map-get($colors, 'white');
 	cursor: pointer;
 	padding: 10px 15px;
+	user-select: none;
 
 	/* Hover style */
-	transition-property: opacity;
-	transition-duration: .3s;
+	transition-property: background-color;
+	transition-duration: .2s;
 	transition-timing-function: ease-in-out;
 
 	&:hover {
-		opacity: .7;
+		background-color: lighten($c, 10%);
 	}
 
 	/* Active style */
-
 	&:active:not(:disabled) {
-		transform: translateY(1px);
+		background-color: darken($c, 10%);
 	}
 }
 
 button {
-	background-color: map-get($colors, 'gray');
-	border: 0;
-	color: map-get($colors, 'white');
-	user-select: none;
-
 	@include buttonize();
 
 	&[type="submit"] {
-		background-color: map-get($colors, 'blue');
+		$c: map-get($colors, 'blue');
+		background-color: $c;
 		color: map-get($colors, 'white');
+
+		&:hover {
+			background-color: lighten($c, 10%);
+		}
+
+		&:active:not(:disabled) {
+			background-color: darken($c, 10%);
+		}
 	}
 
 	&[type="reset"] {
-		background-color: map-get($colors, 'red');
+		$c: map-get($colors, 'red');
+		background-color: $c;
 		color: map-get($colors, 'white');
+
+		&:hover {
+			background-color: lighten($c, 10%);
+		}
+
+		&:active:not(:disabled) {
+			background-color: darken($c, 10%);
+		}
 	}
 
 	&[disabled] {
