@@ -2,6 +2,7 @@
 	cursor: pointer;
 	padding: 10px 15px;
 
+	/* Hover style */
 	transition-property: opacity;
 	transition-duration: .3s;
 	transition-timing-function: ease-in-out;
@@ -10,8 +11,10 @@
 		opacity: .7;
 	}
 
+	/* Active style */
+
 	&:active:not(:disabled) {
-		transform: translateY(2px);
+		transform: translateY(1px);
 	}
 }
 

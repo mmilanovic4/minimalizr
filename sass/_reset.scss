@@ -11,6 +11,7 @@
 }
 
 html {
+	font-size: 100%;
 	scroll-behavior: smooth;
 }
 
@@ -31,4 +32,7 @@ button {
 }
 
 @media screen and (max-width: $breakpoint-sm) {
+	body, button {
+		font-size: .9rem;
+	}
 }
