@@ -2,4 +2,4 @@
 #
 # Production script
 
-sass sass/main.scss css/minimalizr.css --style compressed
+sass src/main.scss dist/minimalizr.css --style compressed

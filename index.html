@@ -5,7 +5,7 @@
 	<title>minimalizr.css</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="css/minimalizr.css">
+	<link rel="stylesheet" href="dist/minimalizr.css">
 </head>
 
 <body>
@@ -13,118 +13,185 @@
 		<h1>Heading #1</h1>
 		<h2>Heading #2</h2>
 		<h3>Heading #3</h3>
-
-		<p><strong>Lorem ipsum</strong> <em>dolor sit amet</em>, <mark>consectetur adipiscing elit</mark>. <del>In accumsan, massa vel ullamcorper ornare, urna est pulvinar lectus, malesuada tempor nisl neque nec odio.</del> Nulla eget justo nisl. In nec felis nisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum sodales vehicula urna, nec lacinia neque convallis ut. Nam viverra ante vitae posuere finibus. Donec sit amet lacinia ipsum. Aenean sed placerat sapien, suscipit maximus elit. Donec pretium orci sem, id aliquam tortor luctus quis. Mauris id molestie ipsum. Donec quis sodales libero. Sed faucibus nulla fringilla ligula vehicula, ac dignissim odio laoreet.</p>
-
-		<p>10<sub>10</sub> = 100</p>
-
-		<p>5<sup>2</sup> = 25</p>
-
-		<p>Abraham Lincoln once said: <q>Whatever you are, be a good one</q>.</p>
-
-		<blockquote>
-			Speak softly, and carry a big stick.
-			<footer>Theodore Roosevelt</footer>
-		</blockquote>
-
-		<p lang="sr"><abbr title="Југословенска војска у отаџбини">ЈВуО</abbr> је била герилска организација у Другом светском рату основана 1941. године.</p>
-
-		<p lang="sr">Притисните тастер <kbd title="Escape">ESC</kbd>.</p>
-
-		<p lang="sr">HTML ознака за слику: <code>&lt;img&gt;</code>.</p>
-
-		<pre class="code">
-&lt;?php
-
-echo "Hello.";
-		</pre>
-
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices elit sit amet semper euismod. Phasellus lacinia lorem eu tortor pellentesque, et auctor nulla sagittis. Fusce ac arcu turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed rhoncus dui vitae tempor porttitor. Cras urna enim, hendrerit ultrices neque eu, eleifend bibendum lacus. Suspendisse consequat urna risus, non ultricies metus lacinia non. Sed vitae viverra est. Vivamus ac semper dui. Donec consequat sit amet est a ullamcorper. Mauris vulputate metus et turpis maximus interdum. Duis a sodales sapien, in accumsan enim. Vestibulum vitae erat iaculis, condimentum eros ut, pulvinar lacus. Fusce tellus est, egestas nec erat in, efficitur maximus erat. Donec id sodales elit, in feugiat enim.</p>
 		<p>
-			<a href="https://www.google.com/" target="_blank">Google</a>
+			Hyperlink:
+			<a href="https://www.google.com/" target="_blank" title="Go to Google Search">Google.com</a>
 		</p>
 
-		<div class="row" lang="sr">
-			<div class="col-md-4 col-sm-12">
-				<p>Континенти:</p>
+		<hr>
+
+		<p>
+			<strong>This text is bold.</strong>
+		</p>
+		<p>
+			<em>This text is italic.</em>
+		</p>
+		<p>
+			<mark>This text is marked.</mark>
+		</p>
+		<p>
+			<del>This text is deleted.</del>
+		</p>
+		<p>
+			<small>This text is small.</small>
+		</p>
+		<p>
+			2<sup>8</sup> = 256
+		</p>
+		<p>
+			log<sub>10</sub>(100) = 2
+		</p>
+
+		<hr>
+
+		<p>The <abbr title="United States of America">USA</abbr> was founded in 1776.</p>
+		<p>Abraham Lincoln once said: <q>Whatever you are, be a good one.</q></p>
+		<blockquote>
+			Speak softly and carry a big stick.
+			<div>- Theodore Roosevelt</div>
+		</blockquote>
+		<p>
+			Apple
+			<address>
+				One Apple Park Way
+				<br>
+				Cupertino, CA 95014
+				<br>
+				(408) 996–1010
+			</address>
+		</p>
+
+		<hr>
+
+		<p>Press <kbd>CTRL + S</kbd> to save the document.</p>
+		<p>
+			In JavaScript,
+			<code>console.log(null || "user")</code>
+			will produce:
+			<samp>user</samp>.
+		</p>
+		<div class="code">
+			<pre>
+				<code>
+	const sayHello = () => {
+		console.log("Hello!");
+	};
+
+	sayHello();
+				</code>
+			</pre>
+		</div>
+
+		<hr>
+
+		<div class="row row-gapped">
+			<div class="col-4 col-sm-12">
+				<p>7 continents:</p>
 				<ol>
-					<li>Азија</li>
-					<li>Африка</li>
-					<li>Северна Америка</li>
-					<li>Јужна Америка</li>
-					<li>Антарктик</li>
-					<li>Европа</li>
-					<li>Аустралија</li>
+					<li>Asia</li>
+					<li>Africa</li>
+					<li>Europe</li>
+					<li>North America</li>
+					<li>South America</li>
+					<li>Australia/Oceania</li>
+					<li>Antarctica</li>
 				</ol>
 			</div>
 
-			<div class="col-md-4 col-sm-12">
-				<p>Океани:</p>
-				<ul class="list-bulleted">
-					<li>Арктички океан</li>
-					<li>Атлантски океан</li>
-					<li>Индијски океан</li>
-					<li>Тихи океан (Пацифик)</li>
-					<li>Јужни океан</li>
+			<div class="col-4 col-sm-12">
+				<p>5 oceans:</p>
+				<ul>
+					<li>Pacific Ocean</li>
+					<li>Atlantic Ocean</li>
+					<li>Indian Ocean</li>
+					<li>Southern Ocean</li>
+					<li>Arctic Ocean</li>
 				</ul>
 			</div>
 
-			<div class="col-md-4 col-sm-12 centered">
+			<div class="col-4 col-sm-12">
 				<figure>
-					<img src="assets/Petar_II.jpg" alt="Краљ Петар II Карађорђевић">
-					<figcaption>Краљ Петар II Карађорђевић</figcaption>
+					<img src="assets/nighthawks.jpg" alt="Nighthawks">
+					<figcaption>
+						<cite>Nighthawks</cite> by Edward Hopper
+					</figcaption>
 				</figure>
 			</div>
 		</div>
 
-		<ul class="breadcrumbs">
-			<li>
-				<a href="#">Home</a>
-			</li>
-			<li>
-				<a href="#">Music</a>
-			</li>
-			<li>
-				<a>Vangelis</a>
-			</li>
-		</ul>
-
-		<details>
-			<summary>Read more</summary>
-			<div>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-		</details>
-
-		<p class="truncate" lang="sr">абвгдђежзијклљмнњопрстћуфхцчџшабвгдђежзијклљмнњопрстћуфхцчџшабвгдђежзијклљмнњопрстћуфхцчџшабвгдђежзијклљмнњопрстћуфхцчџшабвгдђежзијклљмнњопрстћуфхцчџшабвгдђежзијклљмнњопрстћуфхцчџшабвгдђежзијклљмнњопрстћуфхцчџшабвгдђежзијклљмнњопрстћуфхцчџшабвгдђежзијклљмнњопрстћуфхцчџшабвгдђежзијклљмнњопрстћуфхцчџш</p>
-
 		<hr>
-
-		<p style="margin-bottom: 10px;" class="padded rounded bg-red text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p style="margin-bottom: 10px;" class="padded rounded bg-green text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-		<p style="margin-bottom: 10px;" class="padded rounded bg-blue text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-
-		<div class="spinner"></div>
 
 		<div class="table-responsive">
 			<table>
 				<thead>
 					<tr>
-						<th>Country</th>
-						<th>Capital</th>
-						<th>ISO 3166</th>
-						<th>Internet TLD</th>
+						<th>ID</th>
+						<th>Title</th>
+						<th>Year</th>
+						<th>Director</th>
 					</tr>
 				</thead>
 				<tbody>
 					<tr>
-						<td>Serbia</td>
-						<td>Belgrade</td>
-						<td>RS</td>
-						<td>.rs / .срб</td>
+						<td>1</td>
+						<td>Batman Begins</td>
+						<td>2005</td>
+						<td>Christopher Nolan</td>
 					</tr>
 					<tr>
-						<td>United States</td>
-						<td>Washington</td>
-						<td>US</td>
-						<td>.us</td>
+						<td>2</td>
+						<td>The Dark Knight</td>
+						<td>2008</td>
+						<td>Christopher Nolan</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>The Dark Knight Rises</td>
+						<td>2012</td>
+						<td>Christopher Nolan</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Dunkirk</td>
+						<td>2017</td>
+						<td>Christopher Nolan</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Se7en</td>
+						<td>1995</td>
+						<td>David Fincher</td>
+					</tr>
+					<tr>
+						<td>6</td>
+						<td>Fight Club</td>
+						<td>1999</td>
+						<td>David Fincher</td>
+					</tr>
+					<tr>
+						<td>7</td>
+						<td>The Social Network</td>
+						<td>2010</td>
+						<td>David Fincher</td>
+					</tr>
+					<tr>
+						<td>8</td>
+						<td>Gone Girl</td>
+						<td>2014</td>
+						<td>David Fincher</td>
+					</tr>
+					<tr>
+						<td>9</td>
+						<td>Invictus</td>
+						<td>2009</td>
+						<td>Clint Eastwood</td>
+					</tr>
+					<tr>
+						<td>10</td>
+						<td>American Sniper</td>
+						<td>2014</td>
+						<td>Clint Eastwood</td>
 					</tr>
 				</tbody>
 			</table>
@@ -132,67 +199,52 @@ echo "Hello.";
 
 		<hr>
 
-		<div class="row">
-			<form class="col-md-4 col-sm-12">
-				<fieldset>
-					<legend>Main details</legend>
-					<label>
-						<span>Book title</span>
-						<input type="text" required>
-					</label>
-					<label>
-						<span>Book author</span>
-						<select required>
-							<option value="" selected>Select one</option>
-							<option value="1">Isaac Asimov</option>
-							<option value="2">Philip K. Dick</option>
-							<option value="3">Borislav Pekić</option>
-						</select>
-					</label>
-				</fieldset>
-				<label>
-					<span>Book genre</span>
-					<select multiple required>
-						<option value="1">Fantasy</option>
-						<option value="1">Science fiction</option>
-						<option value="1">Western</option>
-						<option value="1">Romance</option>
-						<option value="1">Thriller</option>
-						<option value="1">Mystery</option>
-					</select>
-				</label>
-				<label>
-					<span>Book description</span>
-					<textarea required></textarea>
-				</label>
-				<div class="form-checkbox">
-					<label>
-						Hardcover
-						<input type="checkbox" checked>
-					</label>
-				</div>
-				<label>
-					<span>PIN code</span>
-					<input type="password">
-				</label>
-				<hr>
-				<button type="submit">Add book</button>
-			</form>
+		<p class="bordered padded">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ultrices elit sit amet semper euismod. Phasellus lacinia lorem eu tortor pellentesque, et auctor nulla sagittis. Fusce ac arcu turpis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed rhoncus dui vitae tempor porttitor. Cras urna enim, hendrerit ultrices neque eu, eleifend bibendum lacus. Suspendisse consequat urna risus, non ultricies metus lacinia non. Sed vitae viverra est. Vivamus ac semper dui. Donec consequat sit amet est a ullamcorper. Mauris vulputate metus et turpis maximus interdum. Duis a sodales sapien, in accumsan enim. Vestibulum vitae erat iaculis, condimentum eros ut, pulvinar lacus. Fusce tellus est, egestas nec erat in, efficitur maximus erat. Donec id sodales elit, in feugiat enim.
+		</p>
 
-			<div class="col-md-4 col-sm-12 col-pull-right centered">
-				<label class="file-upload">
-					<input type="file">
-					<span>Choose a file</span>
-				</label>
-			</div>
+		<p class="text-truncate">
+			ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+		</p>
+
+		<p class="hide-on-sm">This text is hidden on devices with smaller screen.</p>
+		<p class="hide-on-print">This text is hidden for printers.</p>
+
+		<hr>
+
+		<div class="row row-gapped">
+			<div class="col-12 bordered padded">1/1</div>
+
+			<div class="col-6 col-sm-12 bordered padded">1/2</div>
+			<div class="col-6 col-sm-12 bordered padded">2/2</div>
+
+			<div class="col-4 col-sm-12 bordered padded">1/3</div>
+			<div class="col-4 col-sm-12 bordered padded">2/3</div>
+			<div class="col-4 col-sm-12 bordered padded">3/3</div>
+
+			<div class="col-3 col-sm-6 bordered padded">1/4</div>
+			<div class="col-3 col-sm-6 bordered padded">2/4</div>
+			<div class="col-3 col-sm-6 bordered padded">3/4</div>
+			<div class="col-3 col-sm-6 bordered padded">4/4</div>
+
+			<div class="col-2 col-sm-6 bordered padded">1/6</div>
+			<div class="col-2 col-sm-6 bordered padded">2/6</div>
+			<div class="col-2 col-sm-6 bordered padded">3/6</div>
+			<div class="col-2 col-sm-6 bordered padded">4/6</div>
+			<div class="col-2 col-sm-6 bordered padded">5/6</div>
+			<div class="col-2 col-sm-6 bordered padded">6/6</div>
+
+			<div class="col-4 bordered padded">Left</div>
+			<div class="col-4 col-pull-right bordered padded">Right</div>
 		</div>
 
-		<div style="margin: 10px 0;">
-			<button type="button">Normal button</button>
-			<button type="submit">Submit button</button>
-			<button type="reset">Reset button</button>
-			<button type="button" disabled>Disabled button</button>
-		</div>
+		<footer>
+			<p>
+				<a href="#">Back to top</a>
+				<br>
+				&copy; Miloš Milanović
+			</p>
+		</footer>
 	</div>
 </body>
 

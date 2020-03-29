@@ -2,4 +2,4 @@
 #
 # Development script
 
-sass sass/main.scss css/minimalizr.css --watch
+sass src/main.scss dist/minimalizr.css --watch

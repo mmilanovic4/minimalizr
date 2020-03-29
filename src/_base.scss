@@ -1,0 +1,181 @@
+/* Root */
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 100%;
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: monospace;
+	font-size: 1rem;
+	line-height: 1.6rem;
+}
+
+/* Headings */
+h1, h2, h3 {
+	margin: $spacing 0;
+}
+
+h1 {
+	font-size: 3rem;
+	line-height: 3rem * 1.6;
+}
+
+h2 {
+	font-size: 2rem;
+	line-height: 2rem * 1.6;
+}
+
+h3 {
+	font-size: 1.5rem;
+	line-height: 1.5rem * 1.6;
+}
+
+/* Paragraphs */
+p {
+	padding: $spacing 0;
+	text-align: justify;
+}
+
+/* Hyperlinks */
+a {
+	color: inherit;
+	cursor: pointer;
+	font-weight: bold;
+	outline: none;
+	text-decoration: none;
+
+	&:active {		
+		outline: 1px dotted gray;
+		outline-offset: 4px;
+	}
+
+	&:hover {
+		text-decoration: underline;
+	}
+}
+
+/* Text formatting */
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+mark {
+	background-color: yellow;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+small, sub, sup {
+	font-size: smaller;
+}
+
+sub {
+	vertical-align: sub;
+}
+
+sup {
+	vertical-align: super;
+}
+
+/* Quotations */
+abbr {
+	&[title] {
+		text-decoration: underline dotted;
+	}
+}
+
+q {
+	font-style: italic;
+	&::before, &::after {
+		content: '"';
+	}
+}
+
+blockquote {
+	border: 1px dashed gray;
+	font-style: italic;
+	margin: $spacing 0;
+	padding: $spacing;
+	text-align: justify;
+
+	div {
+		text-align: right;
+	}
+}
+
+address, cite {
+	font-style: italic;
+}
+
+/* Computer code */
+kbd, samp, code, pre {
+	font-family: monospace;
+	font-weight: bold;
+}
+
+.code {
+	background-color: gray;
+	padding: 0 $spacing;
+	pre {
+		tab-size: 2;
+	}
+}
+
+/* Lists */
+ul, ol {
+	list-style-position: inside;
+}
+
+/* Images */
+img {
+	max-width: 100%;
+	vertical-align: middle;
+}
+
+figure {
+	figcaption {
+		font-size: smaller;
+		text-align: center;
+	}
+}
+
+/* Tables */
+.table-responsive {
+	max-width: 100%;
+	overflow-x: auto;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	border: 1px solid gray;
+	padding: $spacing;
+	text-align: left;
+}
+
+/* Other tags */
+hr {
+	border: 1px solid gray;
+	margin: $spacing 0;
+}
+
+@media screen and (max-width: map-get($breakpoints, 'sm')) {
+	body {
+		font-size: .9rem;
+	}
+}

@@ -1,0 +1,50 @@
+/* Container */
+.container {
+	width: 1200px;
+	max-width: 100%;
+	margin: 0 auto;
+
+	&-fluid {
+		width: 100%;
+	}
+
+	&, &-fluid {
+		padding: 0 $spacing;
+	}
+}
+
+/* Grid system */
+.row {
+	display: grid;
+	grid-template-columns: repeat($numberOfColumns, 1fr);
+	margin: $spacing 0;
+
+	&-gapped {
+		grid-gap: $spacing;
+	}
+}
+
+@mixin columns-generator($numberOfColumns, $size: false) {
+	@for $i from 1 through $numberOfColumns {
+		@if $size {
+			.col-#{$size}-#{$i} {
+				grid-column: span $i;
+			}
+		} @else {
+			.col-#{$i} {
+				grid-column: span $i;
+			}
+		}
+	}
+}
+
+@include columns-generator($numberOfColumns);
+
+.col-pull-right {
+	grid-column-end: -1;
+}
+
+/* Media */
+@media screen and (max-width: map-get($breakpoints, 'sm')) {
+	@include columns-generator($numberOfColumns, 'sm');
+}

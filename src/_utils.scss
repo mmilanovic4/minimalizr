@@ -1,0 +1,32 @@
+.bordered {
+	border: 1px solid gray;
+}
+
+.padded {
+	padding: $spacing;
+}
+
+.text {
+	&-left { text-align: left; }
+	&-center { text-align: center; }
+	&-right { text-align: right; }
+	&-justify { text-align: justify; }
+
+	&-truncate {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, 'sm')) {
+	.hide-on-sm {
+		display: none;
+	}
+}
+
+@media print {
+	.hide-on-print {
+		display: none;
+	}
+}
