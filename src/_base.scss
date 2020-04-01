@@ -51,7 +51,7 @@ a {
 	text-decoration: none;
 
 	&:active {		
-		outline: 1px dotted gray;
+		outline: 1px dotted #808080;
 		outline-offset: 4px;
 	}
 
@@ -104,7 +104,7 @@ q {
 }
 
 blockquote {
-	border: 1px dashed gray;
+	border: 1px dashed #808080;
 	font-style: italic;
 	margin: $spacing 0;
 	padding: $spacing;
@@ -126,7 +126,7 @@ kbd, samp, code, pre {
 }
 
 .code {
-	background-color: gray;
+	background-color: #808080;
 	padding: 0 $spacing;
 	pre {
 		tab-size: 2;
@@ -163,15 +163,95 @@ table {
 }
 
 th, td {
-	border: 1px solid gray;
+	border: 1px solid #808080;
 	padding: $spacing;
 	text-align: left;
 }
 
+/* Forms */
+form {
+	display: grid;
+	grid-auto-flow: row;
+	grid-gap: $spacing;
+
+	& > label {
+		span {
+			font-size: smaller;
+			&:first-child {
+				display: block;
+			}
+		}
+
+		&.checkbox {
+			display: flex;
+			align-items: center;
+			& > input {
+				width: auto;
+				margin-right: $spacing;
+			}
+		}
+	}
+}
+input, textarea, select {
+	border: 1px solid #808080;
+	background-color: #fff;
+	padding: $spacing;
+	width: 100%;
+	box-shadow: none;
+	outline: none;
+
+	&:focus {
+		&:not([type="checkbox"]) {
+			outline: 2px solid #808080;
+			outline-offset: 0;
+		}
+	}
+
+	&:invalid {
+		border-color: #f00;
+	}
+
+	&:disabled {
+		color: #808080;
+		cursor: not-allowed;
+	}
+}
+
+textarea {
+	height: 100px;
+	max-height: 300px;
+	resize: vertical;
+}
+
+/* Buttons */
+button {
+	cursor: pointer;
+	font-weight: bold;
+	border: 1px solid #808080;
+	color: #000;
+	padding: $spacing;
+	transition-property: background-color color;
+	transition-duration: .2s;
+	transition-timing-function: ease-in-out;
+
+	&:hover:not(:disabled) {
+		background-color: #000;
+		color: #fff;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+	}
+}
+
 /* Other tags */
 hr {
-	border: 1px solid gray;
+	border: 1px solid #808080;
 	margin: $spacing 0;
+}
+
+footer {
+	font-size: smaller;
 }
 
 @media screen and (max-width: map-get($breakpoints, 'sm')) {
