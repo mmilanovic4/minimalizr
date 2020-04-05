@@ -1,4 +1,9 @@
 /* Root */
+::selection {
+	background-color: map-get($colors, 'dark');
+	color: map-get($colors, 'light');
+}
+
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -11,6 +16,8 @@ html {
 }
 
 body {
+	background-color: map-get($colors, 'light');
+	color: map-get($colors, 'dark');
 	font-family: monospace;
 	font-size: 1rem;
 	line-height: 1.6rem;
@@ -51,7 +58,7 @@ a {
 	text-decoration: none;
 
 	&:active {		
-		outline: 1px dotted #808080;
+		outline: 1px dotted map-get($colors, 'gray');
 		outline-offset: 4px;
 	}
 
@@ -104,7 +111,7 @@ q {
 }
 
 blockquote {
-	border: 1px dashed #808080;
+	border: 1px dashed map-get($colors, 'gray');
 	font-style: italic;
 	margin: $spacing 0;
 	padding: $spacing;
@@ -126,7 +133,7 @@ kbd, samp, code, pre {
 }
 
 .code {
-	background-color: #808080;
+	background-color: map-get($colors, 'gray');
 	padding: 0 $spacing;
 	pre {
 		tab-size: 2;
@@ -163,7 +170,7 @@ table {
 }
 
 th, td {
-	border: 1px solid #808080;
+	border: 1px solid map-get($colors, 'gray');
 	padding: $spacing;
 	text-align: left;
 }
@@ -173,36 +180,64 @@ form {
 	display: grid;
 	grid-auto-flow: row;
 	grid-gap: $spacing;
+}
 
-	& > label {
+	label {
+		font-size: smaller;
+
 		span {
-			font-size: smaller;
+			user-select: none;
 			&:first-child {
 				display: block;
 			}
 		}
+	}
 
-		&.checkbox {
-			display: flex;
-			align-items: center;
-			& > input {
-				width: auto;
-				margin-right: $spacing;
-			}
-		}
+.checkbox {
+	label {
+		cursor: pointer;
+		display: inline-flex;
+		align-items: center;
+	}
+	input[type="checkbox"] {
+		width: auto;
+		margin-right: $spacing;
 	}
 }
+
+.radiogroup {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	& > span {
+		font-size: smaller;
+		width: 100%;
+	}
+	label {
+		cursor: pointer;
+		user-select: none;
+		display: inline-flex;
+		align-items: center;
+		flex-direction: row-reverse;
+	}
+	input[type="radio"] {
+		width: auto;
+		margin-right: $spacing;
+	}
+}
+
 input, textarea, select {
-	border: 1px solid #808080;
-	background-color: #fff;
+	border: 1px solid map-get($colors, 'gray');
+	background-color: map-get($colors, 'light');
 	padding: $spacing;
 	width: 100%;
 	box-shadow: none;
 	outline: none;
 
 	&:focus {
-		&:not([type="checkbox"]) {
-			outline: 2px solid #808080;
+		&:not([type="checkbox"]):not([type="radio"]) {
+			outline: 2px solid map-get($colors, 'gray');
 			outline-offset: 0;
 		}
 	}
@@ -212,7 +247,7 @@ input, textarea, select {
 	}
 
 	&:disabled {
-		color: #808080;
+		color: map-get($colors, 'gray');
 		cursor: not-allowed;
 	}
 }
@@ -227,16 +262,16 @@ textarea {
 button {
 	cursor: pointer;
 	font-weight: bold;
-	border: 1px solid #808080;
-	color: #000;
+	border: 1px solid map-get($colors, 'gray');
+	color: map-get($colors, 'dark');
 	padding: $spacing;
 	transition-property: background-color color;
 	transition-duration: .2s;
 	transition-timing-function: ease-in-out;
 
 	&:hover:not(:disabled) {
-		background-color: #000;
-		color: #fff;
+		background-color: map-get($colors, 'dark');
+		color: map-get($colors, 'light');
 	}
 
 	&:disabled {
@@ -246,7 +281,7 @@ button {
 
 /* Other tags */
 hr {
-	border: 1px solid #808080;
+	border: 1px solid map-get($colors, 'gray');
 	margin: $spacing 0;
 }
 

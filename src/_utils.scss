@@ -1,5 +1,5 @@
 .bordered {
-	border: 1px solid gray;
+	border: 1px solid map-get($colors, 'gray');
 }
 
 .padded {
@@ -17,6 +17,34 @@
 		text-overflow: ellipsis;
 		white-space: nowrap;
 	}
+}
+
+ul.breadcrumbs {
+	display: flex;
+	list-style-type: none;
+	user-select: none;
+
+	li {
+		padding: $spacing 0;
+
+		&:not(:last-child)::after {
+			content: ' / ';
+			color: map-get($colors, 'blue');
+			display: inline-block;
+			margin: 0 $spacing;
+		}
+
+		&:last-child {
+			a {
+				cursor: initial;
+				font-weight: normal;
+				&:hover {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+
 }
 
 @media screen and (max-width: map-get($breakpoints, 'sm')) {

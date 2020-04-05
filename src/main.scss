@@ -3,6 +3,11 @@ $spacing: 10px;
 $breakpoints: (
 	'sm': 768px
 );
+$colors: (
+	'dark': #222,
+	'light': #fafafa,
+	'gray': #808080
+);
 
 @import 'base';
 @import 'layout';
