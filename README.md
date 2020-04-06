@@ -19,6 +19,6 @@ Just download [minimalizr.css](css/minimalizr.css) and include it in your HTML f
 <link rel="stylesheet" href="css/minimalizr.css">
 ```
 
-## Documentation
+## Preview
 
-Coming soon.
+![Full page screenshot](assets/fullpage.png)

@@ -133,8 +133,9 @@ kbd, samp, code, pre {
 }
 
 .code {
-	background-color: map-get($colors, 'gray');
+	border: 1px solid map-get($colors, 'dark');
 	padding: 0 $spacing;
+	overflow: scroll;
 	pre {
 		tab-size: 2;
 	}
