@@ -8,6 +8,11 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+
+	&:focus {
+		outline: 1px dashed map-get($colors, 'gray');
+		outline-offset: 2px;
+	}
 }
 
 html {
@@ -189,7 +194,7 @@ form {
 		span {
 			user-select: none;
 			&:first-child {
-				display: block;
+				display: inline-block;
 			}
 		}
 	}
@@ -255,6 +260,7 @@ input, textarea, select {
 
 textarea {
 	height: 100px;
+	min-height: 40px;
 	max-height: 300px;
 	resize: vertical;
 }
@@ -277,6 +283,11 @@ button {
 
 	&:disabled {
 		cursor: not-allowed;
+	}
+
+	&:focus {
+		outline: 2px solid map-get($colors, 'gray');
+		outline-offset: 0;
 	}
 }
 
