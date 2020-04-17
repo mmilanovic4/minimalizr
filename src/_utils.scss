@@ -77,16 +77,19 @@ ul.breadcrumbs {
 	&-l {
 		height: 60px;
 		width: 60px;
+		border-width: 6px;
 	}
 
 	&-xl {
 		height: 80px;
 		width: 80px;
+		border-width: 8px;
 	}
 
 	&-xxl {
 		height: 100px;
 		width: 100px;
+		border-width: 10px;
 	}
 }
 
