@@ -265,6 +265,15 @@ textarea {
 	resize: vertical;
 }
 
+fieldset {
+	border: 1px solid map-get($colors, 'gray');
+	padding: 10px;
+}
+
+legend {
+	padding: 5px;
+}
+
 /* Buttons */
 button {
 	cursor: pointer;
@@ -273,7 +282,7 @@ button {
 	color: map-get($colors, 'dark');
 	padding: $spacing;
 	transition-property: background-color color;
-	transition-duration: .2s;
+	transition-duration: .1s;
 	transition-timing-function: ease-in-out;
 
 	&:hover:not(:disabled) {
