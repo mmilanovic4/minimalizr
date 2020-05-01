@@ -1,3 +1,10 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+body {
+	font-family: 'Ubuntu', sans-serif;
+}
+
 /* Root */
 ::selection {
 	background-color: map-get($colors, 'dark');
@@ -23,7 +30,6 @@ html {
 body {
 	background-color: map-get($colors, 'light');
 	color: map-get($colors, 'dark');
-	font-family: monospace;
 	font-size: 1rem;
 	line-height: 1.6rem;
 }
