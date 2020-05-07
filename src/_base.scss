@@ -1,24 +1,24 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
-body {
+* {
 	font-family: 'Ubuntu', sans-serif;
 }
 
 /* Root */
-::selection {
-	background-color: map-get($colors, 'dark');
-	color: map-get($colors, 'light');
-}
-
 * {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
 
 	&:focus {
-		outline: 1px dashed map-get($colors, 'gray');
-		outline-offset: 2px;
+		outline: 3px solid #099;
+		outline-offset: 6px;
+	}
+
+	&::selection {
+		background-color: #099;
+		color: #fefefe;
 	}
 }
 
@@ -28,8 +28,8 @@ html {
 }
 
 body {
-	background-color: map-get($colors, 'light');
-	color: map-get($colors, 'dark');
+	background-color: #fefefe;
+	color: #222;
 	font-size: 1rem;
 	line-height: 1.6rem;
 }
@@ -65,16 +65,15 @@ a {
 	color: inherit;
 	cursor: pointer;
 	font-weight: bold;
-	outline: none;
 	text-decoration: none;
+	border-bottom: 2px solid #222;
 
-	&:active {		
-		outline: 1px dotted map-get($colors, 'gray');
-		outline-offset: 4px;
+	&:active {
+		border-bottom-color: #099;
+		color: #099;
 	}
 
 	&:hover {
-		text-decoration: underline;
 	}
 }
 
@@ -88,7 +87,7 @@ em {
 }
 
 mark {
-	background-color: yellow;
+	background-color: #ff0;
 }
 
 del {
@@ -122,14 +121,15 @@ q {
 }
 
 blockquote {
-	border: 1px dashed map-get($colors, 'gray');
+	border: 1px solid #222;
 	font-style: italic;
 	margin: $spacing 0;
 	padding: $spacing;
 	text-align: justify;
 
 	div {
-		text-align: right;
+		font-size: smaller;
+		margin-top: $spacing;
 	}
 }
 
@@ -143,12 +143,23 @@ kbd, samp, code, pre {
 	font-weight: bold;
 }
 
+kbd, samp, code {
+	background-color: #222;
+	color: #fefefe;
+	padding: 4px;
+	border-radius: 4px;
+}
+
 .code {
-	border: 1px solid map-get($colors, 'dark');
+	border: 1px solid #222;
 	padding: 0 $spacing;
 	overflow: scroll;
 	pre {
 		tab-size: 2;
+		code {
+			background-color: inherit;
+			color: inherit;
+		}
 	}
 }
 
@@ -182,9 +193,14 @@ table {
 }
 
 th, td {
-	border: 1px solid map-get($colors, 'gray');
+	border: 1px solid #222;
 	padding: $spacing;
 	text-align: left;
+}
+
+th {
+	background-color: #099;
+	color: #fefefe;
 }
 
 /* Forms */
@@ -223,7 +239,6 @@ form {
 	flex-wrap: wrap;
 
 	& > span {
-		font-size: smaller;
 		width: 100%;
 	}
 	label {
@@ -240,26 +255,18 @@ form {
 }
 
 input, textarea, select {
-	border: 1px solid map-get($colors, 'gray');
-	background-color: map-get($colors, 'light');
+	border: 1px solid #099;
+	background-color: #fefefe;
 	padding: $spacing;
 	width: 100%;
 	box-shadow: none;
-	outline: none;
-
-	&:focus {
-		&:not([type="checkbox"]):not([type="radio"]) {
-			outline: 2px solid map-get($colors, 'gray');
-			outline-offset: 0;
-		}
-	}
 
 	&:invalid {
 		border-color: #f00;
 	}
 
 	&:disabled {
-		color: map-get($colors, 'gray');
+		color: #888;
 		cursor: not-allowed;
 	}
 }
@@ -271,45 +278,37 @@ textarea {
 	resize: vertical;
 }
 
-fieldset {
-	border: 1px solid map-get($colors, 'gray');
-	padding: 10px;
-}
-
-legend {
-	padding: 5px;
-}
-
 /* Buttons */
 button {
 	cursor: pointer;
 	font-weight: bold;
-	border: 1px solid map-get($colors, 'gray');
-	color: map-get($colors, 'dark');
+	border: 0;
+	background-color: #099;
+	color: #fefefe;
 	padding: $spacing;
-	transition-property: background-color color;
-	transition-duration: .1s;
-	transition-timing-function: ease-in-out;
 
 	&:hover:not(:disabled) {
-		background-color: map-get($colors, 'dark');
-		color: map-get($colors, 'light');
+		transform: translateY(-1px);
 	}
 
 	&:disabled {
 		cursor: not-allowed;
 	}
+}
 
+input, textarea, select, button {
 	&:focus {
-		outline: 2px solid map-get($colors, 'gray');
-		outline-offset: 0;
+		&:not([type="radio"]):not([type="checkbox"]) {
+			outline: none;
+			box-shadow: 0 0 0 1px #099;
+		}
 	}
 }
 
 /* Other tags */
 hr {
-	border: 1px solid map-get($colors, 'gray');
-	margin: $spacing 0;
+	border: 1px solid #222;
+	margin: $spacing * 2 0;
 }
 
 footer {

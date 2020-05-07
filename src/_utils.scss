@@ -1,5 +1,5 @@
 .bordered {
-	border: 1px solid map-get($colors, 'gray');
+	border: 1px solid #222;
 }
 
 .padded {
@@ -34,7 +34,7 @@ ul.breadcrumbs {
 
 		&:not(:last-child)::after {
 			content: ' / ';
-			color: map-get($colors, 'blue');
+			color: #222;
 			display: inline-block;
 			margin: 0 $spacing;
 		}
@@ -43,8 +43,9 @@ ul.breadcrumbs {
 			a {
 				cursor: initial;
 				font-weight: normal;
+				border-bottom: 0;
 				&:hover {
-					text-decoration: none;
+					color: inherit;
 				}
 			}
 		}
@@ -59,16 +60,17 @@ ul.breadcrumbs {
 
 .spinner {
 	&, &-l, &-xl, &-xxl {
-		border: 4px solid map-get($colors, 'gray');
-		border-top: 4px solid map-get($colors, 'dark');
+		border: 4px solid #bbb;
+		border-top: 4px solid #099;
 		border-radius: 50%;
 		display: block;
+		margin: $spacing auto;
+		overflow: hidden;
+
 		animation-name: spin;
 		animation-duration: 1s;
 		animation-timing-function: linear;
 		animation-iteration-count: infinite;
-		margin: $spacing auto;
-		overflow: hidden;
 	}
 
 	height: 40px;

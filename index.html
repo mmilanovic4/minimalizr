@@ -49,7 +49,7 @@
 		<p>Abraham Lincoln once said: <q>Whatever you are, be a good one.</q></p>
 		<blockquote>
 			Speak softly and carry a big stick.
-			<div>- Theodore Roosevelt</div>
+			<div>Theodore Roosevelt</div>
 		</blockquote>
 		<br>
 		Apple
@@ -239,57 +239,54 @@
 		<div class="row row-gapped">
 			<div class="col-4 col-sm-12">
 				<form>
-					<fieldset>
-						<legend>Form</legend>
+					<label>
+						<span>Preferred name</span>
+						<input type="text">
+					</label>
+					<label>
+						<span>Email</span>
+						<input type="email">
+					</label>
+					<label>
+						<span>Password</span>
+						<input type="password">
+					</label>
+					<label>
+						<span>Description</span>
+						<textarea></textarea>
+					</label>
+					<label>
+						<span>Country</span>
+						<select>
+							<option value="">Select one</option>
+							<option value="au">Australia</option>
+							<option value="rs">Serbia</option>
+							<option value="us">USA</option>
+						</select>
+					</label>
+					<div class="checkbox">
 						<label>
-							<span>Preferred name</span>
-							<input type="text">
+							<input type="checkbox">
+							<span>I agree to the terms of service</span>
+						</label>
+					</div>
+					<div class="radiogroup">
+						<span>Gender</span>
+						<label>
+							Male
+							<input type="radio" name="gender" value="male">
 						</label>
 						<label>
-							<span>Email</span>
-							<input type="email">
+							Female
+							<input type="radio" name="gender" value="female">
 						</label>
 						<label>
-							<span>Password</span>
-							<input type="password">
+							Other
+							<input type="radio" name="gender" value="other">
 						</label>
-						<label>
-							<span>Description</span>
-							<textarea></textarea>
-						</label>
-						<label>
-							<span>Country</span>
-							<select>
-								<option value="">Select one</option>
-								<option value="au">Australia</option>
-								<option value="rs">Serbia</option>
-								<option value="us">USA</option>
-							</select>
-						</label>
-						<div class="checkbox">
-							<label>
-								<input type="checkbox">
-								<span>I agree to the terms of service</span>
-							</label>
-						</div>
-						<div class="radiogroup">
-							<span>Gender</span>
-							<label>
-								Male
-								<input type="radio" name="gender" value="male">
-							</label>
-							<label>
-								Female
-								<input type="radio" name="gender" value="female">
-							</label>
-							<label>
-								Other
-								<input type="radio" name="gender" value="other">
-							</label>
-						</div>
-						<hr>
-						<button type="submit">Submit</button>
-					</fieldset>
+					</div>
+					<hr>
+					<button type="submit">Submit</button>
 				</form>
 			</div>
 			<div class="col-8 col-sm-12">
