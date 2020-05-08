@@ -12,8 +12,8 @@
 	padding: 0;
 
 	&:focus {
-		outline: 3px solid #099;
-		outline-offset: 6px;
+		outline: 3px solid rgba(0, 127, 255, .5);
+		outline-offset: 3px;
 	}
 
 	&::selection {
@@ -255,7 +255,7 @@ form {
 }
 
 input, textarea, select {
-	border: 1px solid #099;
+	border: 2px solid #bbb;
 	background-color: #fefefe;
 	padding: $spacing;
 	width: 100%;
@@ -271,6 +271,14 @@ input, textarea, select {
 	}
 }
 
+select[multiple] {
+	padding: 0;
+
+	option {
+		padding: $spacing;
+	}
+}
+
 textarea {
 	height: 100px;
 	min-height: 40px;
@@ -283,12 +291,17 @@ button {
 	cursor: pointer;
 	font-weight: bold;
 	border: 0;
-	background-color: #099;
+	background-color: #bbb;
+	border: 2px solid #bbb;
 	color: #fefefe;
 	padding: $spacing;
 
+	transition-property: background-color;
+	transition-duration: .2s;
+	transition-timing-function: ease-in-out;
+
 	&:hover:not(:disabled) {
-		transform: translateY(-1px);
+		background-color: #099;
 	}
 
 	&:disabled {
@@ -300,7 +313,7 @@ input, textarea, select, button {
 	&:focus {
 		&:not([type="radio"]):not([type="checkbox"]) {
 			outline: none;
-			box-shadow: 0 0 0 1px #099;
+			border-color: #099 !important;
 		}
 	}
 }
