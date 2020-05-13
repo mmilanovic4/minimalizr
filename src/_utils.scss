@@ -1,5 +1,5 @@
 .bordered {
-	border: 1px solid #222;
+	border: 1px solid var(--dark);
 }
 
 .padded {
@@ -34,7 +34,7 @@ ul.breadcrumbs {
 
 		&:not(:last-child)::after {
 			content: ' / ';
-			color: #222;
+			color: var(--dark);
 			display: inline-block;
 			margin: 0 $spacing;
 		}
@@ -60,8 +60,8 @@ ul.breadcrumbs {
 
 .spinner {
 	&, &-l, &-xl, &-xxl {
-		border: 4px solid #bbb;
-		border-top: 4px solid #099;
+		border: 4px solid var(--lightGray);
+		border-top: 4px solid var(--main);
 		border-radius: 50%;
 		display: block;
 		margin: $spacing auto;

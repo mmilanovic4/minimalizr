@@ -5,6 +5,17 @@
 	font-family: 'Ubuntu', sans-serif;
 }
 
+/* Vars */
+:root {
+	--main: #099;
+	--lightGray: #bbb;
+	--dark: #222;
+	--red: #f00;
+	--light: #fefefe;
+	--yellow: #ff0;
+	--gray: #888;
+}
+
 /* Root */
 * {
 	box-sizing: border-box;
@@ -17,8 +28,8 @@
 	}
 
 	&::selection {
-		background-color: #099;
-		color: #fefefe;
+		background-color: var(--main);
+		color: var(--light);
 	}
 }
 
@@ -28,8 +39,8 @@ html {
 }
 
 body {
-	background-color: #fefefe;
-	color: #222;
+	background-color: var(--light);
+	color: var(--dark);
 	font-size: 1rem;
 	line-height: 1.6rem;
 }
@@ -62,18 +73,13 @@ p {
 
 /* Hyperlinks */
 a {
-	color: inherit;
+	color: var(--main);
 	cursor: pointer;
 	font-weight: bold;
 	text-decoration: none;
-	border-bottom: 2px solid #222;
-
-	&:active {
-		border-bottom-color: #099;
-		color: #099;
-	}
 
 	&:hover {
+		border-bottom: 2px solid var(--main);
 	}
 }
 
@@ -87,7 +93,7 @@ em {
 }
 
 mark {
-	background-color: #ff0;
+	background-color: var(--yellow);
 }
 
 del {
@@ -121,7 +127,7 @@ q {
 }
 
 blockquote {
-	border: 1px solid #222;
+	border: 1px solid var(--dark);
 	font-style: italic;
 	margin: $spacing 0;
 	padding: $spacing;
@@ -144,14 +150,14 @@ kbd, samp, code, pre {
 }
 
 kbd, samp, code {
-	background-color: #222;
-	color: #fefefe;
+	background-color: var(--dark);
+	color: var(--light);
 	padding: 4px;
 	border-radius: 4px;
 }
 
 .code {
-	border: 1px solid #222;
+	border: 1px solid var(--dark);
 	padding: 0 $spacing;
 	overflow: scroll;
 	pre {
@@ -193,14 +199,14 @@ table {
 }
 
 th, td {
-	border: 1px solid #222;
+	border: 1px solid var(--dark);
 	padding: $spacing;
 	text-align: left;
 }
 
 th {
-	background-color: #099;
-	color: #fefefe;
+	background-color: var(--main);
+	color: var(--light);
 }
 
 /* Forms */
@@ -255,18 +261,18 @@ form {
 }
 
 input, textarea, select {
-	border: 2px solid #bbb;
-	background-color: #fefefe;
+	border: 2px solid var(--lightGray);
+	background-color: var(--light);
 	padding: $spacing;
 	width: 100%;
 	box-shadow: none;
 
 	&:invalid {
-		border-color: #f00;
+		border-color: var(--red);
 	}
 
 	&:disabled {
-		color: #888;
+		color: var(--gray);
 		cursor: not-allowed;
 	}
 }
@@ -291,9 +297,9 @@ button {
 	cursor: pointer;
 	font-weight: bold;
 	border: 0;
-	background-color: #bbb;
-	border: 2px solid #bbb;
-	color: #fefefe;
+	background-color: var(--lightGray);
+	border: 2px solid var(--lightGray);
+	color: var(--light);
 	padding: $spacing;
 
 	transition-property: background-color;
@@ -301,7 +307,7 @@ button {
 	transition-timing-function: ease-in-out;
 
 	&:hover:not(:disabled) {
-		background-color: #099;
+		background-color: var(--main);
 	}
 
 	&:disabled {
@@ -313,14 +319,14 @@ input, textarea, select, button {
 	&:focus {
 		&:not([type="radio"]):not([type="checkbox"]) {
 			outline: none;
-			border-color: #099 !important;
+			border-color: var(--main) !important;
 		}
 	}
 }
 
 /* Other tags */
 hr {
-	border: 1px solid #222;
+	border: 1px solid var(--dark);
 	margin: $spacing * 2 0;
 }
 
