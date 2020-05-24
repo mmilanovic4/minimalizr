@@ -73,13 +73,15 @@ p {
 
 /* Hyperlinks */
 a {
-	color: var(--main);
+	color: var(--dark);
 	cursor: pointer;
 	font-weight: bold;
 	text-decoration: none;
-
+	border-bottom: 2px solid var(--dark);
+	
 	&:hover {
-		border-bottom: 2px solid var(--main);
+		color: var(--main);
+		border-bottom-color: var(--main);
 	}
 }
 
@@ -127,14 +129,16 @@ q {
 }
 
 blockquote {
-	border: 1px solid var(--dark);
+	border-left: 5px solid var(--dark);
 	font-style: italic;
 	margin: $spacing 0;
 	padding: $spacing;
 	text-align: justify;
+	font-size: larger;
 
 	div {
-		font-size: smaller;
+		font-size: small;
+		font-style: normal;
 		margin-top: $spacing;
 	}
 }
@@ -205,7 +209,7 @@ th, td {
 }
 
 th {
-	background-color: var(--main);
+	background-color: var(--dark);
 	color: var(--light);
 }
 
@@ -279,14 +283,24 @@ input, textarea, select {
 
 select[multiple] {
 	padding: 0;
+	border: 0;
 
 	option {
 		padding: $spacing;
 	}
 }
 
+input, select {
+	border: {
+		left: 0;
+		right: 0;
+		top: 0;
+	}
+	padding-left: 0;
+}
+
 textarea {
-	height: 100px;
+	height: auto;
 	min-height: 40px;
 	max-height: 300px;
 	resize: vertical;
@@ -297,8 +311,7 @@ button {
 	cursor: pointer;
 	font-weight: bold;
 	border: 0;
-	background-color: var(--lightGray);
-	border: 2px solid var(--lightGray);
+	background-color: var(--gray);
 	color: var(--light);
 	padding: $spacing;
 
