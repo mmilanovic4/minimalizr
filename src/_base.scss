@@ -7,13 +7,13 @@
 
 /* Vars */
 :root {
-	--main: #099;
-	--lightGray: #bbb;
-	--dark: #222;
-	--red: #f00;
-	--light: #fefefe;
-	--yellow: #ff0;
-	--gray: #888;
+	--colorMain: #099;
+	--colorLightGray: #bbb;
+	--colorDark: #222;
+	--colorRed: #f00;
+	--colorLight: #fefefe;
+	--colorYellow: #ff0;
+	--colorGray: #888;
 }
 
 /* Root */
@@ -28,8 +28,8 @@
 	}
 
 	&::selection {
-		background-color: var(--main);
-		color: var(--light);
+		background-color: var(--colorMain);
+		color: var(--colorLight);
 	}
 }
 
@@ -39,8 +39,8 @@ html {
 }
 
 body {
-	background-color: var(--light);
-	color: var(--dark);
+	background-color: var(--colorLight);
+	color: var(--colorDark);
 	font-size: 1rem;
 	line-height: 1.6rem;
 }
@@ -73,15 +73,15 @@ p {
 
 /* Hyperlinks */
 a {
-	color: var(--dark);
+	color: var(--colorDark);
 	cursor: pointer;
 	font-weight: bold;
 	text-decoration: none;
-	border-bottom: 2px solid var(--dark);
+	border-bottom: 2px solid var(--colorDark);
 	
 	&:hover {
-		color: var(--main);
-		border-bottom-color: var(--main);
+		color: var(--colorMain);
+		border-bottom-color: var(--colorMain);
 	}
 }
 
@@ -95,7 +95,7 @@ em {
 }
 
 mark {
-	background-color: var(--yellow);
+	background-color: var(--colorYellow);
 }
 
 del {
@@ -129,7 +129,7 @@ q {
 }
 
 blockquote {
-	border-left: 5px solid var(--dark);
+	border-left: 5px solid var(--colorDark);
 	font-style: italic;
 	margin: $spacing 0;
 	padding: $spacing;
@@ -154,18 +154,18 @@ kbd, samp, code, pre {
 }
 
 kbd, samp, code {
-	background-color: var(--dark);
-	color: var(--light);
+	background-color: var(--colorDark);
+	color: var(--colorLight);
 	padding: 4px;
 	border-radius: 4px;
 }
 
 .code {
-	border: 1px solid var(--dark);
+	border: 1px solid var(--colorDark);
 	padding: 0 $spacing;
 	overflow: scroll;
 	pre {
-		tab-size: 2;
+		tab-size: 1;
 		code {
 			background-color: inherit;
 			color: inherit;
@@ -203,14 +203,14 @@ table {
 }
 
 th, td {
-	border: 1px solid var(--dark);
+	border: 1px solid var(--colorDark);
 	padding: $spacing;
 	text-align: left;
 }
 
 th {
-	background-color: var(--dark);
-	color: var(--light);
+	background-color: var(--colorDark);
+	color: var(--colorLight);
 }
 
 /* Forms */
@@ -265,38 +265,28 @@ form {
 }
 
 input, textarea, select {
-	border: 2px solid var(--lightGray);
-	background-color: var(--light);
+	border: 2px solid var(--colorLightGray);
+	background-color: var(--colorLight);
 	padding: $spacing;
 	width: 100%;
 	box-shadow: none;
 
 	&:invalid {
-		border-color: var(--red);
+		border-color: var(--colorRed);
 	}
 
 	&:disabled {
-		color: var(--gray);
+		color: var(--colorGray);
 		cursor: not-allowed;
 	}
 }
 
 select[multiple] {
 	padding: 0;
-	border: 0;
 
 	option {
 		padding: $spacing;
 	}
-}
-
-input, select {
-	border: {
-		left: 0;
-		right: 0;
-		top: 0;
-	}
-	padding-left: 0;
 }
 
 textarea {
@@ -311,8 +301,8 @@ button {
 	cursor: pointer;
 	font-weight: bold;
 	border: 0;
-	background-color: var(--gray);
-	color: var(--light);
+	background-color: var(--colorGray);
+	color: var(--colorLight);
 	padding: $spacing;
 
 	transition-property: background-color;
@@ -320,7 +310,7 @@ button {
 	transition-timing-function: ease-in-out;
 
 	&:hover:not(:disabled) {
-		background-color: var(--main);
+		background-color: var(--colorMain);
 	}
 
 	&:disabled {
@@ -332,14 +322,14 @@ input, textarea, select, button {
 	&:focus {
 		&:not([type="radio"]):not([type="checkbox"]) {
 			outline: none;
-			border-color: var(--main) !important;
+			border-color: var(--colorMain) !important;
 		}
 	}
 }
 
 /* Other tags */
 hr {
-	border: 1px solid var(--dark);
+	border: 1px solid var(--colorDark);
 	margin: $spacing * 2 0;
 }
 
