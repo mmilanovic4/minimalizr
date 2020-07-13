@@ -1,9 +1,9 @@
 .bordered {
-	border: 1px solid var(--colorDark);
+	border: 1px solid #222;
 }
 
 .padded {
-	padding: $spacing;
+	padding: 10px;
 }
 
 .text {
@@ -30,13 +30,13 @@ ul.breadcrumbs {
 	user-select: none;
 
 	li {
-		padding: $spacing 0;
+		padding: 10px 0;
 
 		&:not(:last-child)::after {
 			content: ' / ';
-			color: var(--colorDark);
+			color: #222;
 			display: inline-block;
-			margin: 0 $spacing;
+			margin: 0 10px;
 		}
 
 		&:last-child {
@@ -60,11 +60,11 @@ ul.breadcrumbs {
 
 .spinner {
 	&, &-l, &-xl, &-xxl {
-		border: 4px solid var(--colorLightGray);
-		border-top: 4px solid var(--colorMain);
+		border: 4px solid #999;
+		border-top: 4px solid #222;
 		border-radius: 50%;
 		display: block;
-		margin: $spacing auto;
+		margin: 10px auto;
 		overflow: hidden;
 
 		animation-name: spin;
@@ -95,7 +95,7 @@ ul.breadcrumbs {
 	}
 }
 
-@media screen and (max-width: map-get($breakpoints, 'sm')) {
+@media screen and (max-width: $smBreakpoint) {
 	.hide-on-sm {
 		display: none;
 	}

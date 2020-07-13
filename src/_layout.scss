@@ -1,3 +1,5 @@
+$numberOfColumns: 12;
+
 /* Container */
 .container {
 	width: 1200px;
@@ -9,7 +11,7 @@
 	}
 
 	&, &-fluid {
-		padding: 0 $spacing;
+		padding: 0 10px;
 	}
 }
 
@@ -17,10 +19,10 @@
 .row {
 	display: grid;
 	grid-template-columns: repeat($numberOfColumns, 1fr);
-	margin: $spacing 0;
+	margin: 10px 0;
 
 	&-gapped {
-		grid-gap: $spacing;
+		grid-gap: 10px;
 	}
 }
 
@@ -45,6 +47,6 @@
 }
 
 /* Media */
-@media screen and (max-width: map-get($breakpoints, 'sm')) {
+@media screen and (max-width: $smBreakpoint) {
 	@include columns-generator($numberOfColumns, 'sm');
 }

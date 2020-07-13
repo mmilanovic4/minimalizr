@@ -5,17 +5,6 @@
 	font-family: 'Ubuntu', sans-serif;
 }
 
-/* Vars */
-:root {
-	--colorMain: #099;
-	--colorLightGray: #bbb;
-	--colorDark: #222;
-	--colorRed: #f00;
-	--colorLight: #fefefe;
-	--colorYellow: #ff0;
-	--colorGray: #888;
-}
-
 /* Root */
 * {
 	box-sizing: border-box;
@@ -23,13 +12,13 @@
 	padding: 0;
 
 	&:focus {
-		outline: 3px solid rgba(0, 127, 255, .5);
+		outline: 3px solid #999;
 		outline-offset: 3px;
 	}
 
 	&::selection {
-		background-color: var(--colorMain);
-		color: var(--colorLight);
+		background-color: #222;
+		color: #fff;
 	}
 }
 
@@ -39,15 +28,15 @@ html {
 }
 
 body {
-	background-color: var(--colorLight);
-	color: var(--colorDark);
+	background-color: #fff;
+	color: #222;
 	font-size: 1rem;
 	line-height: 1.6rem;
 }
 
 /* Headings */
 h1, h2, h3 {
-	margin: $spacing 0;
+	margin: 10px 0;
 }
 
 h1 {
@@ -67,21 +56,19 @@ h3 {
 
 /* Paragraphs */
 p {
-	padding: $spacing 0;
+	padding: 10px 0;
 	text-align: justify;
 }
 
 /* Hyperlinks */
 a {
-	color: var(--colorDark);
 	cursor: pointer;
-	font-weight: bold;
 	text-decoration: none;
-	border-bottom: 2px solid var(--colorDark);
-	
-	&:hover {
-		color: var(--colorMain);
-		border-bottom-color: var(--colorMain);
+	border-bottom: 1px solid #999;
+	color: inherit;
+
+	&:hover, &:active {
+		color: #555;
 	}
 }
 
@@ -95,7 +82,7 @@ em {
 }
 
 mark {
-	background-color: var(--colorYellow);
+	background-color: #ff0;
 }
 
 del {
@@ -123,23 +110,24 @@ abbr {
 
 q {
 	font-style: italic;
+
 	&::before, &::after {
 		content: '"';
 	}
 }
 
 blockquote {
-	border-left: 5px solid var(--colorDark);
+	border-left: 5px solid #999;
 	font-style: italic;
-	margin: $spacing 0;
-	padding: $spacing;
+	margin: 10px 0;
+	padding: 10px;
 	text-align: justify;
 	font-size: larger;
 
 	div {
 		font-size: small;
 		font-style: normal;
-		margin-top: $spacing;
+		margin-top: 10px;
 	}
 }
 
@@ -154,18 +142,20 @@ kbd, samp, code, pre {
 }
 
 kbd, samp, code {
-	background-color: var(--colorDark);
-	color: var(--colorLight);
+	background-color: #222;
+	color: #fff;
 	padding: 4px;
 	border-radius: 4px;
 }
 
 .code {
-	border: 1px solid var(--colorDark);
-	padding: 0 $spacing;
+	border: 1px solid #222;
+	padding: 0 10px;
 	overflow: scroll;
+
 	pre {
 		tab-size: 1;
+
 		code {
 			background-color: inherit;
 			color: inherit;
@@ -203,21 +193,21 @@ table {
 }
 
 th, td {
-	border: 1px solid var(--colorDark);
-	padding: $spacing;
+	border: 1px solid #222;
+	padding: 10px;
 	text-align: left;
 }
 
 th {
-	background-color: var(--colorDark);
-	color: var(--colorLight);
+	background-color: #222;
+	color: #fff;
 }
 
 /* Forms */
 form {
 	display: grid;
 	grid-auto-flow: row;
-	grid-gap: $spacing;
+	grid-gap: 10px;
 }
 
 	label {
@@ -225,6 +215,7 @@ form {
 
 		span {
 			user-select: none;
+
 			&:first-child {
 				display: inline-block;
 			}
@@ -237,9 +228,10 @@ form {
 		display: inline-flex;
 		align-items: center;
 	}
+
 	input[type="checkbox"] {
 		width: auto;
-		margin-right: $spacing;
+		margin-right: 10px;
 	}
 }
 
@@ -251,6 +243,7 @@ form {
 	& > span {
 		width: 100%;
 	}
+
 	label {
 		cursor: pointer;
 		user-select: none;
@@ -258,25 +251,26 @@ form {
 		align-items: center;
 		flex-direction: row-reverse;
 	}
+
 	input[type="radio"] {
 		width: auto;
-		margin-right: $spacing;
+		margin-right: 10px;
 	}
 }
 
 input, textarea, select {
-	border: 2px solid var(--colorLightGray);
-	background-color: var(--colorLight);
-	padding: $spacing;
+	border: 2px solid #999;
+	background-color: #fff;
+	padding: 10px;
 	width: 100%;
 	box-shadow: none;
 
 	&:invalid {
-		border-color: var(--colorRed);
+		border-color: #f00;
 	}
 
 	&:disabled {
-		color: var(--colorGray);
+		color: #999;
 		cursor: not-allowed;
 	}
 }
@@ -285,7 +279,7 @@ select[multiple] {
 	padding: 0;
 
 	option {
-		padding: $spacing;
+		padding: 10px;
 	}
 }
 
@@ -300,17 +294,22 @@ textarea {
 button {
 	cursor: pointer;
 	font-weight: bold;
-	border: 0;
-	background-color: var(--colorGray);
-	color: var(--colorLight);
-	padding: $spacing;
+	border: 1px solid #999;
+	background-color: #999;
+	color: #fff;
+	padding: 10px;
 
 	transition-property: background-color;
 	transition-duration: .2s;
 	transition-timing-function: ease-in-out;
 
 	&:hover:not(:disabled) {
-		background-color: var(--colorMain);
+		background-color: #222;
+	}
+
+	&:focus {
+		outline: none;
+		border-color: #222;
 	}
 
 	&:disabled {
@@ -318,26 +317,26 @@ button {
 	}
 }
 
-input, textarea, select, button {
+input, textarea, select {
 	&:focus {
 		&:not([type="radio"]):not([type="checkbox"]) {
 			outline: none;
-			border-color: var(--colorMain) !important;
+			border-color: #222 !important;
 		}
 	}
 }
 
 /* Other tags */
 hr {
-	border: 1px solid var(--colorDark);
-	margin: $spacing * 2 0;
+	border: 1px solid #999;
+	margin: 20px 0;
 }
 
 footer {
 	font-size: smaller;
 }
 
-@media screen and (max-width: map-get($breakpoints, 'sm')) {
+@media screen and (max-width: $smBreakpoint) {
 	body {
 		font-size: .9rem;
 	}
