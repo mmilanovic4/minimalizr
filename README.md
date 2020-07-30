@@ -16,7 +16,7 @@ Lightweight CSS framework built with Sass for easier configuration of grid, colo
 
 ## Usage
 
-Just download [minimalizr.css](css/minimalizr.css) and include it in your HTML file:
+Just download [minimalizr.css](dist/minimalizr.css) and include it in your HTML file:
 
 ```
 <meta name="viewport" content="width=device-width, initial-scale=1">
