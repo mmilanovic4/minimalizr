@@ -1,0 +1,22 @@
+{
+	"name": "minimalizr",
+	"version": "1.0.0",
+	"description": "Lightweight CSS framework built with Sass.",
+	"author": {
+		"name": "Miloš Milanović",
+		"email": "mmilanovic016@gmail.com"
+	},
+	"license": "LGPL-3.0-or-later",
+	"scripts": {
+		"clean": "rm -rf dist/*",
+		"dev": "sass --watch src:dist",
+		"prod": "sass src:dist --style compressed"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mmilanovic4/minimalizr.git"
+	},
+	"devDependencies": {
+		"sass": "^1.26.10"
+	}
+}
