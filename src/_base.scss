@@ -1,8 +1,17 @@
 /* Font */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+$colors: (
+	"main": #069,
+	"dark": #222,
+	"light": #f0f0f0,
+	"dark-gray": #888,
+	"highlight": #ff0,
+	"light-gray": #bbb,
+);
 
 * {
-	font-family: 'Ubuntu', sans-serif;
+	font-family: "Ubuntu", sans-serif;
 }
 
 /* Root */
@@ -11,31 +20,28 @@
 	margin: 0;
 	padding: 0;
 
-	&:focus {
-		outline: 3px solid #999;
-		outline-offset: 3px;
-	}
-
 	&::selection {
-		background-color: #222;
-		color: #fff;
+		background-color: map-get($colors, "main");
+		color: map-get($colors, "light");
 	}
 }
 
 html {
-	font-size: 100%;
+	font-size: 120%;
 	scroll-behavior: smooth;
 }
 
 body {
-	background-color: #fff;
-	color: #222;
+	background-color: map-get($colors, "light");
+	color: map-get($colors, "dark");
 	font-size: 1rem;
 	line-height: 1.6rem;
 }
 
 /* Headings */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	margin: 10px 0;
 }
 
@@ -64,11 +70,11 @@ p {
 a {
 	cursor: pointer;
 	text-decoration: none;
-	border-bottom: 1px solid #999;
-	color: inherit;
+	color: map-get($colors, "main");
 
-	&:hover, &:active {
-		color: #555;
+	&:hover,
+	&:active {
+		color: inherit;
 	}
 }
 
@@ -82,14 +88,16 @@ em {
 }
 
 mark {
-	background-color: #ff0;
+	background-color: map-get($colors, "highlight");
 }
 
 del {
 	text-decoration: line-through;
 }
 
-small, sub, sup {
+small,
+sub,
+sup {
 	font-size: smaller;
 }
 
@@ -103,21 +111,23 @@ sup {
 
 /* Quotations */
 abbr {
+	text-decoration: none;
 	&[title] {
-		text-decoration: underline dotted;
+		border-bottom: 2px dotted map-get($colors, "dark");
 	}
 }
 
 q {
 	font-style: italic;
 
-	&::before, &::after {
+	&::before,
+	&::after {
 		content: '"';
 	}
 }
 
 blockquote {
-	border-left: 5px solid #999;
+	border-left: 5px solid map-get($colors, "main");
 	font-style: italic;
 	margin: 10px 0;
 	padding: 10px;
@@ -131,40 +141,32 @@ blockquote {
 	}
 }
 
-address, cite {
+address,
+cite {
 	font-style: italic;
 }
 
 /* Computer code */
-kbd, samp, code, pre {
+kbd,
+samp,
+code,
+pre {
 	font-family: monospace;
 	font-weight: bold;
 }
 
-kbd, samp, code {
-	background-color: #222;
-	color: #fff;
+kbd,
+samp,
+code {
+	background-color: map-get($colors, "main");
+	color: map-get($colors, "light");
 	padding: 4px;
 	border-radius: 4px;
 }
 
-.code {
-	border: 1px solid #999;
-	padding: 0 10px;
-	overflow: scroll;
-
-	pre {
-		tab-size: 1;
-
-		code {
-			background-color: inherit;
-			color: inherit;
-		}
-	}
-}
-
 /* Lists */
-ul, ol {
+ul,
+ol {
 	list-style-position: inside;
 }
 
@@ -185,150 +187,45 @@ figure {
 .table-responsive {
 	max-width: 100%;
 	overflow-x: auto;
+	overflow-y: scroll;
+	max-height: 281px;
 }
 
 table {
+	border: 1px solid map-get($colors, "dark-gray");
+	border-right: 0;
 	border-collapse: collapse;
 	width: 100%;
 }
 
-th, td {
-	border: 1px solid #999;
-	padding: 10px;
+th,
+td {
+	padding: 0 10px;
 	text-align: left;
+	height: 40px;
+	vertical-align: middle;
+	white-space: nowrap;
 }
 
 th {
-	background-color: #555;
-	color: #fff;
+	background-color: map-get($colors, "main");
+	color: map-get($colors, "light");
+	position: sticky;
+	top: 0;
 }
 
-/* Forms */
-form {
-	display: grid;
-	grid-auto-flow: row;
-	grid-gap: 10px;
-}
-
-	label {
-		font-size: smaller;
-
-		span {
-			user-select: none;
-
-			&:first-child {
-				display: inline-block;
-			}
-		}
-	}
-
-.checkbox {
-	label {
-		cursor: pointer;
-		display: inline-flex;
-		align-items: center;
-	}
-
-	input[type="checkbox"] {
-		width: auto;
-		margin-right: 10px;
-	}
-}
-
-.radiogroup {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-
-	& > span {
-		width: 100%;
-	}
-
-	label {
-		cursor: pointer;
-		user-select: none;
-		display: inline-flex;
-		align-items: center;
-		flex-direction: row-reverse;
-	}
-
-	input[type="radio"] {
-		width: auto;
-		margin-right: 10px;
-	}
-}
-
-input, textarea, select {
-	border: 2px solid #999;
-	background-color: #fff;
-	padding: 10px;
-	width: 100%;
-	box-shadow: none;
-
-	&:invalid {
-		border-color: #f00;
-	}
-
-	&:disabled {
-		color: #999;
-		cursor: not-allowed;
-	}
-}
-
-select[multiple] {
-	padding: 0;
-
-	option {
-		padding: 10px;
-	}
-}
-
-textarea {
-	height: auto;
-	min-height: 40px;
-	max-height: 300px;
-	resize: vertical;
-}
-
-/* Buttons */
-button {
-	cursor: pointer;
-	font-weight: bold;
-	border: 1px solid #999;
-	background-color: #999;
-	color: #fff;
-	padding: 10px;
-
-	transition-property: background-color;
-	transition-duration: .2s;
-	transition-timing-function: ease-in-out;
-
-	&:hover:not(:disabled) {
-		background-color: #222;
-	}
-
-	&:focus {
-		outline: none;
-		border-color: #222;
-	}
-
-	&:disabled {
-		cursor: not-allowed;
-	}
-}
-
-input, textarea, select {
-	&:focus {
-		&:not([type="radio"]):not([type="checkbox"]) {
-			outline: none;
-			border-color: #222 !important;
+tbody {
+	tr {
+		border-bottom: 1px solid map-get($colors, "dark-gray");
+		&:last-of-type {
+			border-bottom: 0;
 		}
 	}
 }
 
 /* Other tags */
 hr {
-	border: 1px solid #999;
+	border: 1px solid map-get($colors, "dark-gray");
 	margin: 20px 0;
 }
 
@@ -338,6 +235,6 @@ footer {
 
 @media screen and (max-width: $smBreakpoint) {
 	body {
-		font-size: .9rem;
+		font-size: 0.9rem;
 	}
 }

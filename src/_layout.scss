@@ -10,7 +10,8 @@ $numberOfColumns: 12;
 		width: 100%;
 	}
 
-	&, &-fluid {
+	&,
+	&-fluid {
 		padding: 0 10px;
 	}
 }
@@ -48,5 +49,5 @@ $numberOfColumns: 12;
 
 /* Media */
 @media screen and (max-width: $smBreakpoint) {
-	@include columns-generator($numberOfColumns, 'sm');
+	@include columns-generator($numberOfColumns, "sm");
 }
