@@ -1,5 +1,6 @@
 /* Font */
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap");
 
 $colors: (
 	"main": #069,
@@ -27,7 +28,7 @@ $colors: (
 }
 
 html {
-	font-size: 120%;
+	font-size: 100%;
 	scroll-behavior: smooth;
 }
 
@@ -151,7 +152,7 @@ kbd,
 samp,
 code,
 pre {
-	font-family: monospace;
+	font-family: "Fira Code", monospace;
 	font-weight: bold;
 }
 
