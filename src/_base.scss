@@ -5,7 +5,7 @@
 $colors: (
 	"main": #069,
 	"dark": #222,
-	"light": #f0f0f0,
+	"light": #fefefe,
 	"dark-gray": #888,
 	"highlight": #ff0,
 	"light-gray": #bbb,
@@ -139,6 +139,16 @@ blockquote {
 		font-size: small;
 		font-style: normal;
 		margin-top: 10px;
+	}
+}
+
+details {
+	summary {
+		cursor: pointer;
+	}
+	p {
+		margin: 0;
+		padding: 10px;
 	}
 }
 
