@@ -203,8 +203,7 @@ figure {
 }
 
 table {
-	border: 1px solid map-get($colors, "dark-gray");
-	border-right: 0;
+	border: 0;
 	border-collapse: collapse;
 	width: 100%;
 }
@@ -227,10 +226,7 @@ th {
 
 tbody {
 	tr {
-		border-bottom: 1px solid map-get($colors, "dark-gray");
-		&:last-of-type {
-			border-bottom: 0;
-		}
+		border-bottom: 1px solid map-get($colors, "light-gray");
 	}
 }
 
