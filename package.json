@@ -17,6 +17,6 @@
 		"url": "https://github.com/mmilanovic4/minimalizr.git"
 	},
 	"devDependencies": {
-		"sass": "^1.32.5"
+		"sass": "^1.32.7"
 	}
 }
